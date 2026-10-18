@@ -1,7 +1,7 @@
 {
   "brand": "Nammaveetu Basket",
   "title": "Kitchen & Malligai Hot Deals",
-  "updated_at": "2026-10-18T16:35:35.316Z",
+  "updated_at": "2026-10-18T16:41:22.242Z",
   "total_deals": 220,
   "amazon_tag": "nammaveetubas-21",
   "deals": [
@@ -17,7 +17,7 @@
       "savings_amount": 41,
       "image_url": "https://cdn0.desidime.com/attachments/photos/3556294/medium/41FQNLKyvML.jpg?1792318235",
       "affiliate_url": "https://www.amazon.in/dp/B09YMNLQPR?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.527Z"
+      "published_at": "2026-10-18T16:41:17.216Z"
     },
     {
       "id": "amz-B0F79NDZZK",
@@ -45,7 +45,7 @@
       "savings_amount": 70,
       "image_url": "https://cdn0.desidime.com/attachments/photos/3556195/medium/image-1792311432912.jpg?1792311465",
       "affiliate_url": "https://www.amazon.in/dp/B0GQVGHRYB?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.205Z"
+      "published_at": "2026-10-18T16:41:16.933Z"
     },
     {
       "id": "amz-B0BMJBZLWD",
@@ -59,21 +59,21 @@
       "savings_amount": 159,
       "image_url": "https://cdn3.desidime.com/attachments/photos/3556293/medium/51s7OCaCjbL.jpg?1792318153",
       "affiliate_url": "https://www.amazon.in/dp/B0BMJBZLWD?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.526Z"
+      "published_at": "2026-10-18T16:41:17.241Z"
     },
     {
-      "id": "amz-B0GY8W3MKL",
-      "asin": "B0GY8W3MKL",
-      "title": "LG 9 Kg, 5 Star, Smart Inverter Technology, In-built heater with Steam, Fully Automatic Top Load Washing Machine",
+      "id": "amz-B0F6BTDHFL",
+      "asin": "B0F6BTDHFL",
+      "title": "Havells FAB BLDC LED Ceiling Fan 1200 mm, 5 star, Air Flow:235 CMM, 3 Year Warranty, White",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 18989,
-      "mrp": 25635,
+      "deal_price": 2550,
+      "mrp": 3443,
       "discount_pct": 26,
-      "savings_amount": 6646,
-      "image_url": "https://cdn1.desidime.com/topics/photos/2183229/medium/lg-9-kg-5-star-2183229.jpg?1792300934",
-      "affiliate_url": "https://www.amazon.in/dp/B0GY8W3MKL?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:27.654Z"
+      "savings_amount": 893,
+      "image_url": "https://cdn2.desidime.com/attachments/photos/3556178/medium/31UBxKidmjL.jpg?1792310277",
+      "affiliate_url": "https://www.amazon.in/dp/B0F6BTDHFL?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:16.930Z"
     },
     {
       "id": "amz-B01COQMCSK",
@@ -113,9 +113,9 @@
       "mrp": 230,
       "discount_pct": 26,
       "savings_amount": 60,
-      "image_url": "https://cdn3.desidime.com/attachments/photos/3556371/medium/image-1792321996401.jpg?1792322008",
+      "image_url": "https://cdn2.desidime.com/attachments/photos/3556371/medium/image-1792321996401.jpg?1792322008",
       "affiliate_url": "https://www.amazon.in/dp/B0D8BRRD1B?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.219Z"
+      "published_at": "2026-10-18T16:41:16.960Z"
     },
     {
       "id": "amz-B07C5PHJQ5",
@@ -129,21 +129,21 @@
       "savings_amount": 157,
       "image_url": "https://cdn2.desidime.com/attachments/photos/3556289/medium/51Lxx1cLCL.jpg?1792318028",
       "affiliate_url": "https://www.amazon.in/dp/B07C5PHJQ5?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.527Z"
+      "published_at": "2026-10-18T16:41:17.245Z"
     },
     {
-      "id": "amz-B009P2L7CO",
-      "asin": "B009P2L7CO",
-      "title": "Bajaj DHX-9 1000W Heavy Weight Dry Iron | Advance Soleplate And Anti-Bacterial German Coating Technology",
+      "id": "amz-B0GY8W3MKL",
+      "asin": "B0GY8W3MKL",
+      "title": "LG 9 Kg, 5 Star, Smart Inverter Technology, In-built heater with Steam, Fully Automatic Top Load Washing Machine",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 858,
-      "mrp": 1158,
+      "deal_price": 18989,
+      "mrp": 25635,
       "discount_pct": 26,
-      "savings_amount": 300,
-      "image_url": "https://cdn1.desidime.com/attachments/photos/3556207/medium/61pzGogGgUL.ACAIweblab1006854T4FMavifSF700700PQ69.jpg?1792312243",
-      "affiliate_url": "https://www.amazon.in/dp/B009P2L7CO?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.213Z"
+      "savings_amount": 6646,
+      "image_url": "https://cdn2.desidime.com/topics/photos/2183229/medium/lg-9-kg-5-star-2183229.jpg?1792300934",
+      "affiliate_url": "https://www.amazon.in/dp/B0GY8W3MKL?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:16.937Z"
     },
     {
       "id": "amz-B07575FPC3",
@@ -185,7 +185,7 @@
       "savings_amount": 47,
       "image_url": "https://cdn0.desidime.com/attachments/photos/3555636/medium/image-1792257437891.jpg?1792257448",
       "affiliate_url": "https://www.amazon.in/dp/B0DPSN7JHM?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.516Z"
+      "published_at": "2026-10-18T16:41:17.243Z"
     },
     {
       "id": "amz-B07GDR7VZ3",
@@ -202,18 +202,18 @@
       "published_at": "2026-10-18T16:35:34.060Z"
     },
     {
-      "id": "amz-B0F6BTDHFL",
-      "asin": "B0F6BTDHFL",
-      "title": "Havells FAB BLDC LED Ceiling Fan 1200 mm, 5 star, Air Flow:235 CMM, 3 Year Warranty, White",
+      "id": "amz-B009P2L7CO",
+      "asin": "B009P2L7CO",
+      "title": "Bajaj DHX-9 1000W Heavy Weight Dry Iron | Advance Soleplate And Anti-Bacterial German Coating Technology",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 2550,
-      "mrp": 3443,
+      "deal_price": 858,
+      "mrp": 1158,
       "discount_pct": 26,
-      "savings_amount": 893,
-      "image_url": "https://cdn2.desidime.com/attachments/photos/3556178/medium/31UBxKidmjL.jpg?1792310277",
-      "affiliate_url": "https://www.amazon.in/dp/B0F6BTDHFL?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.221Z"
+      "savings_amount": 300,
+      "image_url": "https://cdn1.desidime.com/attachments/photos/3556207/medium/61pzGogGgUL.ACAIweblab1006854T4FMavifSF700700PQ69.jpg?1792312243",
+      "affiliate_url": "https://www.amazon.in/dp/B009P2L7CO?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:16.947Z"
     },
     {
       "id": "amz-B0CNPL8X3D",
@@ -283,7 +283,7 @@
       "savings_amount": 20087,
       "image_url": "https://cdn3.desidime.com/attachments/photos/3556011/medium/31lAQOopxTL.jpg?1792303635",
       "affiliate_url": "https://www.amazon.in/dp/B093Q1SLL4?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.540Z"
+      "published_at": "2026-10-18T16:41:17.229Z"
     },
     {
       "id": "amz-B0CPVK4G2F",
@@ -353,7 +353,7 @@
       "savings_amount": 11809,
       "image_url": "https://cdn2.desidime.com/topics/photos/2183086/medium/samsung-12-kg-5star-ai-2183086.png?1792253580",
       "affiliate_url": "https://www.amazon.in/dp/B0DFCWTNT6?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.839Z"
+      "published_at": "2026-10-18T16:41:17.520Z"
     },
     {
       "id": "amz-B00TZS0C38",
@@ -384,17 +384,17 @@
       "published_at": "2026-10-18T15:06:54.482Z"
     },
     {
-      "id": "amz-B0DPSS4S9T",
-      "asin": "B0DPSS4S9T",
-      "title": "Diolty Floor Cleaners liquids, Bathroom Tiles, Surface Cleaning Liquid, Ecofriendly, Non-Toxic, Skin Friendly, Tiles clean...",
+      "id": "amz-B0C33BL5NL",
+      "asin": "B0C33BL5NL",
+      "title": "Harpic Bathroom Cleaner Liquid, Lemon - 1 Litre + Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 1 Litre",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 189,
-      "mrp": 242,
-      "discount_pct": 22,
-      "savings_amount": 53,
-      "image_url": "https://m.media-amazon.com/images/I/612269dTCcL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0DPSS4S9T?tag=nammaveetubas-21",
+      "deal_price": 375,
+      "mrp": 490,
+      "discount_pct": 23,
+      "savings_amount": 115,
+      "image_url": "https://m.media-amazon.com/images/I/714d2ax1hSL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0C33BL5NL?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.070Z"
     },
     {
@@ -412,18 +412,18 @@
       "published_at": "2026-10-18T15:06:56.425Z"
     },
     {
-      "id": "amz-B0C5MXF7GF",
-      "asin": "B0C5MXF7GF",
-      "title": "AO Smith Geyser 15 Litre 5 Star Rating (BEE) | Powerful 2KW Heating | Storage Water Heater",
+      "id": "amz-B0GP6V371Z",
+      "asin": "B0GP6V371Z",
+      "title": "Haier 540 L 3 Star Frost Free Inverter Side by Side Refrigerator",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 5804,
-      "mrp": 7835,
+      "deal_price": 41890,
+      "mrp": 56552,
       "discount_pct": 26,
-      "savings_amount": 2031,
-      "image_url": "https://cdn0.desidime.com/topics/photos/2183028/medium/ao-smith-geyser-15-litre-2183028.png?1792253959",
-      "affiliate_url": "https://www.amazon.in/dp/B0C5MXF7GF?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.844Z"
+      "savings_amount": 14662,
+      "image_url": "https://cdn2.desidime.com/topics/photos/2183094/medium/haier-540-l-3-star-2183094.png?1792253338",
+      "affiliate_url": "https://www.amazon.in/dp/B0GP6V371Z?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:17.540Z"
     },
     {
       "id": "amz-B0C5XV43V3",
@@ -454,17 +454,17 @@
       "published_at": "2026-10-18T15:06:54.484Z"
     },
     {
-      "id": "amz-B0C33BL5NL",
-      "asin": "B0C33BL5NL",
-      "title": "Harpic Bathroom Cleaner Liquid, Lemon - 1 Litre + Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 1 Litre",
+      "id": "amz-B071HGVPSJ",
+      "asin": "B071HGVPSJ",
+      "title": "Harpic Disinfectant Bathroom Cleaner Liquid, Lemon - 1 L (Pack of 2) | India",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 375,
-      "mrp": 490,
-      "discount_pct": 23,
-      "savings_amount": 115,
-      "image_url": "https://m.media-amazon.com/images/I/714d2ax1hSL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0C33BL5NL?tag=nammaveetubas-21",
+      "deal_price": 378,
+      "mrp": 484,
+      "discount_pct": 22,
+      "savings_amount": 106,
+      "image_url": "https://m.media-amazon.com/images/I/71HxWfevcAL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B071HGVPSJ?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.070Z"
     },
     {
@@ -482,18 +482,18 @@
       "published_at": "2026-10-18T15:06:56.426Z"
     },
     {
-      "id": "amz-B0GP6V371Z",
-      "asin": "B0GP6V371Z",
-      "title": "Haier 540 L 3 Star Frost Free Inverter Side by Side Refrigerator",
+      "id": "amz-B0C5MXF7GF",
+      "asin": "B0C5MXF7GF",
+      "title": "AO Smith Geyser 15 Litre 5 Star Rating (BEE) | Powerful 2KW Heating | Storage Water Heater",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 41890,
-      "mrp": 56552,
+      "deal_price": 5804,
+      "mrp": 7835,
       "discount_pct": 26,
-      "savings_amount": 14662,
-      "image_url": "https://cdn2.desidime.com/topics/photos/2183094/medium/haier-540-l-3-star-2183094.png?1792253338",
-      "affiliate_url": "https://www.amazon.in/dp/B0GP6V371Z?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:28.856Z"
+      "savings_amount": 2031,
+      "image_url": "https://cdn0.desidime.com/topics/photos/2183028/medium/ao-smith-geyser-15-litre-2183028.png?1792253959",
+      "affiliate_url": "https://www.amazon.in/dp/B0C5MXF7GF?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:17.543Z"
     },
     {
       "id": "amz-B08RFRBFFK",
@@ -524,17 +524,17 @@
       "published_at": "2026-10-18T15:06:54.484Z"
     },
     {
-      "id": "amz-B071HGVPSJ",
-      "asin": "B071HGVPSJ",
-      "title": "Harpic Disinfectant Bathroom Cleaner Liquid, Lemon - 1 L (Pack of 2) | India",
+      "id": "amz-B00NWFYSTY",
+      "asin": "B00NWFYSTY",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Lavender - 1L | Kills 99.9% Germs | India",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 378,
-      "mrp": 484,
+      "deal_price": 210,
+      "mrp": 269,
       "discount_pct": 22,
-      "savings_amount": 106,
-      "image_url": "https://m.media-amazon.com/images/I/71HxWfevcAL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B071HGVPSJ?tag=nammaveetubas-21",
+      "savings_amount": 59,
+      "image_url": "https://m.media-amazon.com/images/I/71iOCqC3CFL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B00NWFYSTY?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.070Z"
     },
     {
@@ -594,17 +594,17 @@
       "published_at": "2026-10-18T15:06:54.484Z"
     },
     {
-      "id": "amz-B00NWFYSTY",
-      "asin": "B00NWFYSTY",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Lavender - 1L | Kills 99.9% Germs | India",
+      "id": "amz-B0G446GBY1",
+      "asin": "B0G446GBY1",
+      "title": "Lizol Fresh & Clean Bathroom Cleaner | Floral | 1L | 10X Better Cleaning | Upto 12Hrs Fragrance| Multi Surface Clean Floor...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 210,
-      "mrp": 269,
+      "deal_price": 239,
+      "mrp": 306,
       "discount_pct": 22,
-      "savings_amount": 59,
-      "image_url": "https://m.media-amazon.com/images/I/71iOCqC3CFL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B00NWFYSTY?tag=nammaveetubas-21",
+      "savings_amount": 67,
+      "image_url": "https://m.media-amazon.com/images/I/61b9h-QkJaL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0G446GBY1?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.070Z"
     },
     {
@@ -664,17 +664,17 @@
       "published_at": "2026-10-18T15:06:54.484Z"
     },
     {
-      "id": "amz-B0G446GBY1",
-      "asin": "B0G446GBY1",
-      "title": "Lizol Fresh & Clean Bathroom Cleaner | Floral | 1L | 10X Better Cleaning | Upto 12Hrs Fragrance| Multi Surface Clean Floor...",
+      "id": "amz-B08CPRYLK4",
+      "asin": "B08CPRYLK4",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid Refill Pack, Citrus - 1800 ml",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 239,
-      "mrp": 306,
-      "discount_pct": 22,
+      "deal_price": 262,
+      "mrp": 329,
+      "discount_pct": 20,
       "savings_amount": 67,
-      "image_url": "https://m.media-amazon.com/images/I/61b9h-QkJaL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0G446GBY1?tag=nammaveetubas-21",
+      "image_url": "https://m.media-amazon.com/images/I/713inad-viL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B08CPRYLK4?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.070Z"
     },
     {
@@ -734,17 +734,17 @@
       "published_at": "2026-10-18T15:06:54.484Z"
     },
     {
-      "id": "amz-B08CPRYLK4",
-      "asin": "B08CPRYLK4",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid Refill Pack, Citrus - 1800 ml",
+      "id": "amz-B01HGN96GW",
+      "asin": "B01HGN96GW",
+      "title": "Harpic Bathroom Cleaner Lemon - 1 L",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 262,
-      "mrp": 329,
-      "discount_pct": 20,
-      "savings_amount": 67,
-      "image_url": "https://m.media-amazon.com/images/I/713inad-viL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B08CPRYLK4?tag=nammaveetubas-21",
+      "deal_price": 230,
+      "mrp": 294,
+      "discount_pct": 22,
+      "savings_amount": 64,
+      "image_url": "https://m.media-amazon.com/images/I/61fdnP73K6L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B01HGN96GW?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.070Z"
     },
     {
@@ -804,18 +804,18 @@
       "published_at": "2026-10-18T15:06:54.485Z"
     },
     {
-      "id": "amz-B01HGN96GW",
-      "asin": "B01HGN96GW",
-      "title": "Harpic Bathroom Cleaner Lemon - 1 L",
+      "id": "amz-B00NWFXPUC",
+      "asin": "B00NWFXPUC",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 1 Litre | Suitable for All Floor Cleaner Mops | Kills 99.9% Ge...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 230,
-      "mrp": 294,
+      "deal_price": 196,
+      "mrp": 251,
       "discount_pct": 22,
-      "savings_amount": 64,
-      "image_url": "https://m.media-amazon.com/images/I/61fdnP73K6L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B01HGN96GW?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.070Z"
+      "savings_amount": 55,
+      "image_url": "https://m.media-amazon.com/images/I/71spFGLkW3L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B00NWFXPUC?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
       "id": "amz-B095S9KLY8",
@@ -874,17 +874,17 @@
       "published_at": "2026-10-18T15:06:54.485Z"
     },
     {
-      "id": "amz-B00NWFXPUC",
-      "asin": "B00NWFXPUC",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 1 Litre | Suitable for All Floor Cleaner Mops | Kills 99.9% Ge...",
+      "id": "amz-B00NWFXTJY",
+      "asin": "B00NWFXTJY",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 2 Litre | Suitable for All Floor Cleaner Mops | Kills 99.9% Ge...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 196,
-      "mrp": 251,
-      "discount_pct": 22,
-      "savings_amount": 55,
-      "image_url": "https://m.media-amazon.com/images/I/71spFGLkW3L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B00NWFXPUC?tag=nammaveetubas-21",
+      "deal_price": 377,
+      "mrp": 510,
+      "discount_pct": 26,
+      "savings_amount": 133,
+      "image_url": "https://m.media-amazon.com/images/I/71wI2HcnB7L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B00NWFXTJY?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -944,17 +944,17 @@
       "published_at": "2026-10-18T15:06:54.485Z"
     },
     {
-      "id": "amz-B00NWFXTJY",
-      "asin": "B00NWFXTJY",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 2 Litre | Suitable for All Floor Cleaner Mops | Kills 99.9% Ge...",
+      "id": "amz-B0G4469RF8",
+      "asin": "B0G4469RF8",
+      "title": "Lizol Fresh & Clean Bathroom Cleaner | Pine | 500 ml + 200 ml Free | Limited Period Offer | 10X Better Cleaning | Up to 12...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 377,
-      "mrp": 510,
-      "discount_pct": 26,
-      "savings_amount": 133,
-      "image_url": "https://m.media-amazon.com/images/I/71wI2HcnB7L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B00NWFXTJY?tag=nammaveetubas-21",
+      "deal_price": 144,
+      "mrp": 150,
+      "discount_pct": 4,
+      "savings_amount": 6,
+      "image_url": "https://m.media-amazon.com/images/I/61Puu5k6cLL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0G4469RF8?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1014,17 +1014,17 @@
       "published_at": "2026-10-18T15:06:54.485Z"
     },
     {
-      "id": "amz-B0G4469RF8",
-      "asin": "B0G4469RF8",
-      "title": "Lizol Fresh & Clean Bathroom Cleaner | Pine | 500 ml + 200 ml Free | Limited Period Offer | 10X Better Cleaning | Up to 12...",
+      "id": "amz-B0G44BYNFQ",
+      "asin": "B0G44BYNFQ",
+      "title": "Lizol Fresh & Clean Bathroom Cleaner | Floral | 500 ml + 200 ml Free | Limited Period Offer | 10X Better Cleaning | Up to ...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 144,
-      "mrp": 150,
-      "discount_pct": 5,
-      "savings_amount": 6,
-      "image_url": "https://m.media-amazon.com/images/I/61Puu5k6cLL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0G4469RF8?tag=nammaveetubas-21",
+      "deal_price": 140,
+      "mrp": 200,
+      "discount_pct": 30,
+      "savings_amount": 60,
+      "image_url": "https://m.media-amazon.com/images/I/61JGGVpJ0WL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0G44BYNFQ?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1084,17 +1084,17 @@
       "published_at": "2026-10-18T15:06:54.485Z"
     },
     {
-      "id": "amz-B0G44BYNFQ",
-      "asin": "B0G44BYNFQ",
-      "title": "Lizol Fresh & Clean Bathroom Cleaner | Floral | 500 ml + 200 ml Free | Limited Period Offer | 10X Better Cleaning | Up to ...",
+      "id": "amz-B0H2H2BSH8",
+      "asin": "B0H2H2BSH8",
+      "title": "Harpic 1L - Disinfectant Toilet Cleaner Liquid, Original with Bathroom Cleaner Ultra, Citrus Splash 1L",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 140,
-      "mrp": 200,
-      "discount_pct": 30,
-      "savings_amount": 60,
-      "image_url": "https://m.media-amazon.com/images/I/61JGGVpJ0WL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0G44BYNFQ?tag=nammaveetubas-21",
+      "deal_price": 432,
+      "mrp": 544,
+      "discount_pct": 21,
+      "savings_amount": 112,
+      "image_url": "https://m.media-amazon.com/images/I/71iE7QEPQRL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0H2H2BSH8?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1154,17 +1154,17 @@
       "published_at": "2026-10-18T15:06:54.485Z"
     },
     {
-      "id": "amz-B0H2H2BSH8",
-      "asin": "B0H2H2BSH8",
-      "title": "Harpic 1L - Disinfectant Toilet Cleaner Liquid, Original with Bathroom Cleaner Ultra, Citrus Splash 1L",
+      "id": "amz-B07JM9B9DB",
+      "asin": "B07JM9B9DB",
+      "title": "Amazon Brand - Presto! Disinfectant Bathroom Cleaner Liquid | Lemon | 1 Litre | Pack of 1 | Kills 99.99% of Germs | Suitab...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 432,
-      "mrp": 544,
-      "discount_pct": 21,
-      "savings_amount": 112,
-      "image_url": "https://m.media-amazon.com/images/I/71iE7QEPQRL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0H2H2BSH8?tag=nammaveetubas-21",
+      "deal_price": 99,
+      "mrp": 127,
+      "discount_pct": 22,
+      "savings_amount": 28,
+      "image_url": "https://m.media-amazon.com/images/I/61Q4G949ZtL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B07JM9B9DB?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1224,17 +1224,17 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B07JM9B9DB",
-      "asin": "B07JM9B9DB",
-      "title": "Amazon Brand - Presto! Disinfectant Bathroom Cleaner Liquid | Lemon | 1 Litre | Pack of 1 | Kills 99.99% of Germs | Suitab...",
+      "id": "amz-B0G144ZKR2",
+      "asin": "B0G144ZKR2",
+      "title": "Harpic Bathroom Cleaner Ultra | Citrus Splash | 500ml | 10X Tough Stain Remover | Instantly Removes, Hard Water, Rust & Li...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 99,
-      "mrp": 127,
-      "discount_pct": 22,
-      "savings_amount": 28,
-      "image_url": "https://m.media-amazon.com/images/I/61Q4G949ZtL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B07JM9B9DB?tag=nammaveetubas-21",
+      "deal_price": 138,
+      "mrp": 276,
+      "discount_pct": 50,
+      "savings_amount": 138,
+      "image_url": "https://m.media-amazon.com/images/I/51xiSqGB5eL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0G144ZKR2?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1294,17 +1294,17 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B0G144ZKR2",
-      "asin": "B0G144ZKR2",
-      "title": "Harpic Bathroom Cleaner Ultra | Citrus Splash | 500ml | 10X Tough Stain Remover | Instantly Removes, Hard Water, Rust & Li...",
+      "id": "amz-B0G146NFTJ",
+      "asin": "B0G146NFTJ",
+      "title": "Harpic Bathroom Cleaner Ultra | Petal Breeze | 1L | 10X Tough Stain Remover | Instantly Removes, Hard Water, Rust & Limesc...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 138,
-      "mrp": 276,
-      "discount_pct": 50,
-      "savings_amount": 138,
-      "image_url": "https://m.media-amazon.com/images/I/51xiSqGB5eL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0G144ZKR2?tag=nammaveetubas-21",
+      "deal_price": 245,
+      "mrp": 314,
+      "discount_pct": 22,
+      "savings_amount": 69,
+      "image_url": "https://m.media-amazon.com/images/I/61RCoIByl9L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0G146NFTJ?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1364,17 +1364,17 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B0G146NFTJ",
-      "asin": "B0G146NFTJ",
-      "title": "Harpic Bathroom Cleaner Ultra | Petal Breeze | 1L | 10X Tough Stain Remover | Instantly Removes, Hard Water, Rust & Limesc...",
+      "id": "amz-B07ZKQ8HXS",
+      "asin": "B07ZKQ8HXS",
+      "title": "Amazon Brand - Presto! Disinfectant Surface & Floor Cleaner | Citrus | 5 Litre | Kills 99.9% Germs | Suitable For Floor & ...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 245,
-      "mrp": 314,
-      "discount_pct": 22,
-      "savings_amount": 69,
-      "image_url": "https://m.media-amazon.com/images/I/61RCoIByl9L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0G146NFTJ?tag=nammaveetubas-21",
+      "deal_price": 519,
+      "mrp": 770,
+      "discount_pct": 33,
+      "savings_amount": 251,
+      "image_url": "https://m.media-amazon.com/images/I/61w1TISN+AL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B07ZKQ8HXS?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1434,17 +1434,17 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B07ZKQ8HXS",
-      "asin": "B07ZKQ8HXS",
-      "title": "Amazon Brand - Presto! Disinfectant Surface & Floor Cleaner | Citrus | 5 Litre | Kills 99.9% Germs | Suitable For Floor & ...",
+      "id": "amz-B07DCXYJ4N",
+      "asin": "B07DCXYJ4N",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 5 Litre | Suitable for All Floor Cleaner Mops | Kills 99.9% Ge...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 519,
-      "mrp": 770,
-      "discount_pct": 33,
-      "savings_amount": 251,
-      "image_url": "https://m.media-amazon.com/images/I/61w1TISN+AL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B07ZKQ8HXS?tag=nammaveetubas-21",
+      "deal_price": 770,
+      "mrp": 986,
+      "discount_pct": 22,
+      "savings_amount": 216,
+      "image_url": "https://m.media-amazon.com/images/I/71L9QqeHtRL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B07DCXYJ4N?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.071Z"
     },
     {
@@ -1504,18 +1504,18 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B0DPHBYDZ2",
-      "asin": "B0DPHBYDZ2",
-      "title": "Diolty Floor Cleaners liquids, Bathroom Tiles, Surface Cleaning Liquid, Ecofriendly, Non-Toxic, Skin Friendly, Tiles clean...",
+      "id": "amz-B0B29DLP32",
+      "asin": "B0B29DLP32",
+      "title": "Harpic Bathroom Cleaner (Lemon) - 1 L and Harpic Powerplus Toilet Cleaner Original, 1 L",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 179,
-      "mrp": 229,
-      "discount_pct": 22,
-      "savings_amount": 50,
-      "image_url": "https://m.media-amazon.com/images/I/61AAMJiwf2L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0DPHBYDZ2?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.071Z"
+      "deal_price": 362,
+      "mrp": 475,
+      "discount_pct": 24,
+      "savings_amount": 113,
+      "image_url": "https://m.media-amazon.com/images/I/71Q9Zll0nOL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0B29DLP32?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
       "id": "amz-B0FJSCQQL2",
@@ -1574,18 +1574,18 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B07DCXYJ4N",
-      "asin": "B07DCXYJ4N",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 5 Litre | Suitable for All Floor Cleaner Mops | Kills 99.9% Ge...",
+      "id": "amz-B076ZFL8K1",
+      "asin": "B076ZFL8K1",
+      "title": "Harpic Disinfectant Toilet Cleaner Liquid, Original - 500 ml and Lizol Floor Cleaner, Citrus - 500 ml",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 770,
-      "mrp": 986,
+      "deal_price": 233,
+      "mrp": 298,
       "discount_pct": 22,
-      "savings_amount": 216,
-      "image_url": "https://m.media-amazon.com/images/I/71L9QqeHtRL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B07DCXYJ4N?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.071Z"
+      "savings_amount": 65,
+      "image_url": "https://m.media-amazon.com/images/I/61bAHU4-0LL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B076ZFL8K1?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
       "id": "amz-B084KV1673",
@@ -1644,17 +1644,17 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B0B29DLP32",
-      "asin": "B0B29DLP32",
-      "title": "Harpic Bathroom Cleaner (Lemon) - 1 L and Harpic Powerplus Toilet Cleaner Original, 1 L",
+      "id": "amz-B0GQBL1ZL1",
+      "asin": "B0GQBL1ZL1",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Lavender - 625 ml | Suitable for All Floor Cleaner Mops | Kills 99.9% G...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 362,
-      "mrp": 475,
-      "discount_pct": 24,
-      "savings_amount": 113,
-      "image_url": "https://m.media-amazon.com/images/I/71Q9Zll0nOL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0B29DLP32?tag=nammaveetubas-21",
+      "deal_price": 169,
+      "mrp": 216,
+      "discount_pct": 22,
+      "savings_amount": 47,
+      "image_url": "https://m.media-amazon.com/images/I/61KOFK2PaoL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0GQBL1ZL1?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -1714,17 +1714,17 @@
       "published_at": "2026-10-18T15:06:54.486Z"
     },
     {
-      "id": "amz-B076ZFL8K1",
-      "asin": "B076ZFL8K1",
-      "title": "Harpic Disinfectant Toilet Cleaner Liquid, Original - 500 ml and Lizol Floor Cleaner, Citrus - 500 ml",
+      "id": "amz-B0755CG1LW",
+      "asin": "B0755CG1LW",
+      "title": "Amazon Brand - Presto! Disinfectant Surface & Floor Cleaner Liquid | Lavendar | 2 Litre | 1 Can | Kills 99.9% Germs | Remo...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 233,
-      "mrp": 298,
-      "discount_pct": 22,
-      "savings_amount": 65,
-      "image_url": "https://m.media-amazon.com/images/I/61bAHU4-0LL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B076ZFL8K1?tag=nammaveetubas-21",
+      "deal_price": 229,
+      "mrp": 315,
+      "discount_pct": 27,
+      "savings_amount": 86,
+      "image_url": "https://m.media-amazon.com/images/I/61vKueSIicL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0755CG1LW?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -1784,17 +1784,17 @@
       "published_at": "2026-10-18T15:06:54.487Z"
     },
     {
-      "id": "amz-B0GQBL1ZL1",
-      "asin": "B0GQBL1ZL1",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Lavender - 625 ml | Suitable for All Floor Cleaner Mops | Kills 99.9% G...",
+      "id": "amz-B0D6QR44S9",
+      "asin": "B0D6QR44S9",
+      "title": "Lizol Shakti 900ml - Rose Fresh Floor Cleaner| 2X Better Cleaning vs Phenyl |Kills 99.9% Germs| Removes Tough Stains | Sui...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 169,
-      "mrp": 216,
-      "discount_pct": 22,
-      "savings_amount": 47,
-      "image_url": "https://m.media-amazon.com/images/I/61KOFK2PaoL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0GQBL1ZL1?tag=nammaveetubas-21",
+      "deal_price": 126,
+      "mrp": 140,
+      "discount_pct": 10,
+      "savings_amount": 14,
+      "image_url": "https://m.media-amazon.com/images/I/61hjHHQvGzL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0D6QR44S9?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -1854,17 +1854,17 @@
       "published_at": "2026-10-18T15:06:54.487Z"
     },
     {
-      "id": "amz-B0755CG1LW",
-      "asin": "B0755CG1LW",
-      "title": "Amazon Brand - Presto! Disinfectant Surface & Floor Cleaner Liquid | Lavendar | 2 Litre | 1 Can | Kills 99.9% Germs | Remo...",
+      "id": "amz-B0G13Z25V1",
+      "asin": "B0G13Z25V1",
+      "title": "Harpic Bathroom Cleaner Ultra | Petal breeze | 500ml | 10X Tough Stain Remover | Instantly Removes, Hard Water, Rust & Lim...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 229,
-      "mrp": 315,
-      "discount_pct": 27,
-      "savings_amount": 86,
-      "image_url": "https://m.media-amazon.com/images/I/61vKueSIicL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0755CG1LW?tag=nammaveetubas-21",
+      "deal_price": 138,
+      "mrp": 276,
+      "discount_pct": 50,
+      "savings_amount": 138,
+      "image_url": "https://m.media-amazon.com/images/I/51wS+MioB9L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0G13Z25V1?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -1924,17 +1924,17 @@
       "published_at": "2026-10-18T15:06:59.163Z"
     },
     {
-      "id": "amz-B0D6QR44S9",
-      "asin": "B0D6QR44S9",
-      "title": "Lizol Shakti 900ml - Rose Fresh Floor Cleaner| 2X Better Cleaning vs Phenyl |Kills 99.9% Germs| Removes Tough Stains | Sui...",
+      "id": "amz-B085HFKL89",
+      "asin": "B085HFKL89",
+      "title": "Harpic Bathroom Cleaner Liquid, Lemon - 1 Litre (Pack of 2) | New Thicker Bathroom Floor Cleaner | Red Harpic Bottle",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 126,
-      "mrp": 140,
-      "discount_pct": 10,
-      "savings_amount": 14,
-      "image_url": "https://m.media-amazon.com/images/I/61hjHHQvGzL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0D6QR44S9?tag=nammaveetubas-21",
+      "deal_price": 373,
+      "mrp": 460,
+      "discount_pct": 19,
+      "savings_amount": 87,
+      "image_url": "https://m.media-amazon.com/images/I/719Vp4A8seL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B085HFKL89?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -1994,17 +1994,17 @@
       "published_at": "2026-10-18T15:06:59.163Z"
     },
     {
-      "id": "amz-B0G13Z25V1",
-      "asin": "B0G13Z25V1",
-      "title": "Harpic Bathroom Cleaner Ultra | Petal breeze | 500ml | 10X Tough Stain Remover | Instantly Removes, Hard Water, Rust & Lim...",
+      "id": "amz-B0D8HW8SZ7",
+      "asin": "B0D8HW8SZ7",
+      "title": "Vim Dishwash Liquid 3 L pouch | Removes 100+ Odours & Grease in 1 wash | With the power of 100 Lemons",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 138,
-      "mrp": 276,
-      "discount_pct": 50,
-      "savings_amount": 138,
-      "image_url": "https://m.media-amazon.com/images/I/51wS+MioB9L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0G13Z25V1?tag=nammaveetubas-21",
+      "deal_price": 379,
+      "mrp": 545,
+      "discount_pct": 30,
+      "savings_amount": 166,
+      "image_url": "https://m.media-amazon.com/images/I/61aN1OYUsjL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0D8HW8SZ7?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -2064,17 +2064,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B085HFKL89",
-      "asin": "B085HFKL89",
-      "title": "Harpic Bathroom Cleaner Liquid, Lemon - 1 Litre (Pack of 2) | New Thicker Bathroom Floor Cleaner | Red Harpic Bottle",
+      "id": "amz-B0GH1WCT89",
+      "asin": "B0GH1WCT89",
+      "title": "Lizol Shakti 900ml (Pack of 2)- Aqua Fresh Floor Cleaner| 2X Better Cleaning vs Phenyl |Kills 99.9% Germs| Removes Tough S...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 373,
-      "mrp": 460,
-      "discount_pct": 19,
-      "savings_amount": 87,
-      "image_url": "https://m.media-amazon.com/images/I/719Vp4A8seL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B085HFKL89?tag=nammaveetubas-21",
+      "deal_price": 199,
+      "mrp": 270,
+      "discount_pct": 26,
+      "savings_amount": 71,
+      "image_url": "https://m.media-amazon.com/images/I/61ayh1+jc+L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0GH1WCT89?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -2134,17 +2134,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B0D8HW8SZ7",
-      "asin": "B0D8HW8SZ7",
-      "title": "Vim Dishwash Liquid 3 L pouch | Removes 100+ Odours & Grease in 1 wash | With the power of 100 Lemons",
+      "id": "amz-B077MCF1YR",
+      "asin": "B077MCF1YR",
+      "title": "Harpic 1 Litre (Pack of 3) - Original, Disinfectant Toilet Cleaner Liquid | Suitable for Toilet Bowls",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 379,
-      "mrp": 545,
-      "discount_pct": 30,
-      "savings_amount": 166,
-      "image_url": "https://m.media-amazon.com/images/I/61aN1OYUsjL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0D8HW8SZ7?tag=nammaveetubas-21",
+      "deal_price": 513,
+      "mrp": 657,
+      "discount_pct": 22,
+      "savings_amount": 144,
+      "image_url": "https://m.media-amazon.com/images/I/717lGPCyd1L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B077MCF1YR?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -2204,17 +2204,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B0GH1WCT89",
-      "asin": "B0GH1WCT89",
-      "title": "Lizol Shakti 900ml (Pack of 2)- Aqua Fresh Floor Cleaner| 2X Better Cleaning vs Phenyl |Kills 99.9% Germs| Removes Tough S...",
+      "id": "amz-B00M99II36",
+      "asin": "B00M99II36",
+      "title": "Vim Dishwash Liquid Gel Lemon, With Lemon Fragrance, Leaves No Residue, Grease Cleaner For All Utensils, 750 ml Bottle",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 199,
-      "mrp": 270,
-      "discount_pct": 26,
-      "savings_amount": 71,
-      "image_url": "https://m.media-amazon.com/images/I/61ayh1+jc+L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0GH1WCT89?tag=nammaveetubas-21",
+      "deal_price": 189,
+      "mrp": 252,
+      "discount_pct": 25,
+      "savings_amount": 63,
+      "image_url": "https://m.media-amazon.com/images/I/51A8+b9ZgHL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B00M99II36?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -2274,17 +2274,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B077MCF1YR",
-      "asin": "B077MCF1YR",
-      "title": "Harpic 1 Litre (Pack of 3) - Original, Disinfectant Toilet Cleaner Liquid | Suitable for Toilet Bowls",
+      "id": "amz-B08CPLHQ7B",
+      "asin": "B08CPLHQ7B",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid Refill Pack, Floral - 1800 ml | Suitable for All Floor Cleaner Mops | Ki...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 513,
-      "mrp": 657,
+      "deal_price": 252,
+      "mrp": 323,
       "discount_pct": 22,
-      "savings_amount": 144,
-      "image_url": "https://m.media-amazon.com/images/I/717lGPCyd1L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B077MCF1YR?tag=nammaveetubas-21",
+      "savings_amount": 71,
+      "image_url": "https://m.media-amazon.com/images/I/7134B-qRPaL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B08CPLHQ7B?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.072Z"
     },
     {
@@ -2344,18 +2344,18 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B00M99II36",
-      "asin": "B00M99II36",
-      "title": "Vim Dishwash Liquid Gel Lemon, With Lemon Fragrance, Leaves No Residue, Grease Cleaner For All Utensils, 750 ml Bottle",
+      "id": "amz-B0995ZHTXX",
+      "asin": "B0995ZHTXX",
+      "title": "Purela floor cleaner liquid, Kills All Germs & Viruses To Makes Surfaces Safe & Remove Tough Stains, Bathroom Surface Clea...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 189,
-      "mrp": 252,
-      "discount_pct": 25,
-      "savings_amount": 63,
-      "image_url": "https://m.media-amazon.com/images/I/51A8+b9ZgHL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B00M99II36?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.072Z"
+      "deal_price": 149,
+      "mrp": 191,
+      "discount_pct": 22,
+      "savings_amount": 42,
+      "image_url": "https://m.media-amazon.com/images/I/612d0zLhb0S._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0995ZHTXX?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
       "id": "amz-B0DVH31XGD",
@@ -2414,18 +2414,18 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B08CPLHQ7B",
-      "asin": "B08CPLHQ7B",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid Refill Pack, Floral - 1800 ml | Suitable for All Floor Cleaner Mops | Ki...",
+      "id": "amz-B07VM8727V",
+      "asin": "B07VM8727V",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Floral - 625ml | Kills 99.9% Germs",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 252,
-      "mrp": 323,
+      "deal_price": 169,
+      "mrp": 216,
       "discount_pct": 22,
-      "savings_amount": 71,
-      "image_url": "https://m.media-amazon.com/images/I/7134B-qRPaL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B08CPLHQ7B?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.072Z"
+      "savings_amount": 47,
+      "image_url": "https://m.media-amazon.com/images/I/61I1onuG68L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B07VM8727V?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
       "id": "amz-B0H3F561SJ",
@@ -2484,17 +2484,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B0995ZHTXX",
-      "asin": "B0995ZHTXX",
-      "title": "Purela floor cleaner liquid, Kills All Germs & Viruses To Makes Surfaces Safe & Remove Tough Stains, Bathroom Surface Clea...",
+      "id": "amz-B0CL3P5NX2",
+      "asin": "B0CL3P5NX2",
+      "title": "Harpic 1 Litre (Pack of 4) - Lemon, Bathroom Cleaner Liquid | New Thicker Bathroom Floor Cleaner | Red Harpic Bottle",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 149,
-      "mrp": 191,
+      "deal_price": 756,
+      "mrp": 968,
       "discount_pct": 22,
-      "savings_amount": 42,
-      "image_url": "https://m.media-amazon.com/images/I/612d0zLhb0S._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0995ZHTXX?tag=nammaveetubas-21",
+      "savings_amount": 212,
+      "image_url": "https://m.media-amazon.com/images/I/71ZVyNKf5kL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0CL3P5NX2?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2554,17 +2554,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B07VM8727V",
-      "asin": "B07VM8727V",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Floral - 625ml | Kills 99.9% Germs",
+      "id": "amz-B0929QFDMY",
+      "asin": "B0929QFDMY",
+      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 625 ml (Pack of 2) | Suitable for All Floor Cleaner Mops | Kil...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 169,
-      "mrp": 216,
+      "deal_price": 305,
+      "mrp": 390,
       "discount_pct": 22,
-      "savings_amount": 47,
-      "image_url": "https://m.media-amazon.com/images/I/61I1onuG68L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B07VM8727V?tag=nammaveetubas-21",
+      "savings_amount": 85,
+      "image_url": "https://m.media-amazon.com/images/I/71EBF2cVQeL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0929QFDMY?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2624,17 +2624,17 @@
       "published_at": "2026-10-18T15:06:59.164Z"
     },
     {
-      "id": "amz-B0CL3P5NX2",
-      "asin": "B0CL3P5NX2",
-      "title": "Harpic 1 Litre (Pack of 4) - Lemon, Bathroom Cleaner Liquid | New Thicker Bathroom Floor Cleaner | Red Harpic Bottle",
+      "id": "amz-B08CNMBJZ7",
+      "asin": "B08CNMBJZ7",
+      "title": "Vim Fresh Lemon Fragrance Dishwash Liquid Gel 2L Refill Pack|| Leaves No Residue|| Grease Cleaner For Utensils - Liquid Ki...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 756,
-      "mrp": 968,
+      "deal_price": 342,
+      "mrp": 438,
       "discount_pct": 22,
-      "savings_amount": 212,
-      "image_url": "https://m.media-amazon.com/images/I/71ZVyNKf5kL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0CL3P5NX2?tag=nammaveetubas-21",
+      "savings_amount": 96,
+      "image_url": "https://m.media-amazon.com/images/I/61hUGmqkpbL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B08CNMBJZ7?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2694,17 +2694,17 @@
       "published_at": "2026-10-18T15:06:59.165Z"
     },
     {
-      "id": "amz-B0929QFDMY",
-      "asin": "B0929QFDMY",
-      "title": "Lizol Disinfectant Surface & Floor Cleaner Liquid, Citrus - 625 ml (Pack of 2) | Suitable for All Floor Cleaner Mops | Kil...",
+      "id": "amz-B0B9XP4M4H",
+      "asin": "B0B9XP4M4H",
+      "title": "Harpic Disinfectant Bathroom Cleaner Liquid, Floral - 1L & Harpic Disinfectant Toilet Cleaner Liquid, Original - 1 L | Ind...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 305,
-      "mrp": 390,
-      "discount_pct": 22,
-      "savings_amount": 85,
-      "image_url": "https://m.media-amazon.com/images/I/71EBF2cVQeL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0929QFDMY?tag=nammaveetubas-21",
+      "deal_price": 377,
+      "mrp": 475,
+      "discount_pct": 21,
+      "savings_amount": 98,
+      "image_url": "https://m.media-amazon.com/images/I/71OmEeiqo2L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0B9XP4M4H?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2764,17 +2764,17 @@
       "published_at": "2026-10-18T15:06:59.165Z"
     },
     {
-      "id": "amz-B08CNMBJZ7",
-      "asin": "B08CNMBJZ7",
-      "title": "Vim Fresh Lemon Fragrance Dishwash Liquid Gel 2L Refill Pack|| Leaves No Residue|| Grease Cleaner For Utensils - Liquid Ki...",
+      "id": "amz-B0DQPBKPR4",
+      "asin": "B0DQPBKPR4",
+      "title": "Vim Floor Cleaner: 1000ml | Sparkling Lemon | 100% Removal of stains for complete clean floors & long lasting fragrance (P...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 342,
-      "mrp": 438,
-      "discount_pct": 22,
-      "savings_amount": 96,
-      "image_url": "https://m.media-amazon.com/images/I/61hUGmqkpbL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B08CNMBJZ7?tag=nammaveetubas-21",
+      "deal_price": 349,
+      "mrp": 480,
+      "discount_pct": 27,
+      "savings_amount": 131,
+      "image_url": "https://m.media-amazon.com/images/I/61EmLd7qM9L._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0DQPBKPR4?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2834,17 +2834,17 @@
       "published_at": "2026-10-18T15:06:59.165Z"
     },
     {
-      "id": "amz-B0B9XP4M4H",
-      "asin": "B0B9XP4M4H",
-      "title": "Harpic Disinfectant Bathroom Cleaner Liquid, Floral - 1L & Harpic Disinfectant Toilet Cleaner Liquid, Original - 1 L | Ind...",
+      "id": "amz-B0H2JYG4VK",
+      "asin": "B0H2JYG4VK",
+      "title": "Vim Floor Cleaner: 1.8L | French Lavender with Sage | 100% Removal of stains for complete clean fl | Vim Fresh Lemon Fragr...",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 377,
-      "mrp": 475,
-      "discount_pct": 21,
-      "savings_amount": 98,
-      "image_url": "https://m.media-amazon.com/images/I/71OmEeiqo2L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0B9XP4M4H?tag=nammaveetubas-21",
+      "deal_price": 612,
+      "mrp": 780,
+      "discount_pct": 22,
+      "savings_amount": 168,
+      "image_url": "https://m.media-amazon.com/images/I/61dOIPmmDBL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0H2JYG4VK?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2904,17 +2904,17 @@
       "published_at": "2026-10-18T15:06:59.166Z"
     },
     {
-      "id": "amz-B0DQPBKPR4",
-      "asin": "B0DQPBKPR4",
-      "title": "Vim Floor Cleaner: 1000ml | Sparkling Lemon | 100% Removal of stains for complete clean floors & long lasting fragrance (P...",
+      "id": "amz-B0DF5TSDWD",
+      "asin": "B0DF5TSDWD",
+      "title": "Vim Floor Cleaner: 1000ml | Sparkling Lemon | 100% Removal of stains for complete clean floors & long lasting fragrance",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 349,
-      "mrp": 480,
-      "discount_pct": 27,
-      "savings_amount": 131,
-      "image_url": "https://m.media-amazon.com/images/I/61EmLd7qM9L._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0DQPBKPR4?tag=nammaveetubas-21",
+      "deal_price": 179,
+      "mrp": 229,
+      "discount_pct": 22,
+      "savings_amount": 50,
+      "image_url": "https://m.media-amazon.com/images/I/51CdaYKfNEL._AC_UL320_.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0DF5TSDWD?tag=nammaveetubas-21",
       "published_at": "2026-10-18T16:35:33.073Z"
     },
     {
@@ -2974,18 +2974,18 @@
       "published_at": "2026-10-18T16:35:35.316Z"
     },
     {
-      "id": "amz-B0H2JYG4VK",
-      "asin": "B0H2JYG4VK",
-      "title": "Vim Floor Cleaner: 1.8L | French Lavender with Sage | 100% Removal of stains for complete clean fl | Vim Fresh Lemon Fragr...",
+      "id": "amz-B07H5C9B6M",
+      "asin": "B07H5C9B6M",
+      "title": "Surf Excel Matic Top Load Liquid Detergent 2L Refill Pouch",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 612,
-      "mrp": 780,
-      "discount_pct": 22,
-      "savings_amount": 168,
-      "image_url": "https://m.media-amazon.com/images/I/61dOIPmmDBL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0H2JYG4VK?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.073Z"
+      "deal_price": 325,
+      "mrp": 450,
+      "discount_pct": 28,
+      "savings_amount": 125,
+      "image_url": null,
+      "affiliate_url": "https://www.amazon.in/dp/B07H5C9B6M?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:22.242Z"
     },
     {
       "id": "amz-B085YGBVDV",
@@ -3030,18 +3030,18 @@
       "published_at": "2026-10-18T15:06:54.484Z"
     },
     {
-      "id": "amz-B0DF5TSDWD",
-      "asin": "B0DF5TSDWD",
-      "title": "Vim Floor Cleaner: 1000ml | Sparkling Lemon | 100% Removal of stains for complete clean floors & long lasting fragrance",
+      "id": "amz-B0DGLHVLVQ",
+      "asin": "B0DGLHVLVQ",
+      "title": "Dettol Lime Fresh Bathing Soap Bar with 12hr Freshness (150g Pack of 5)",
       "store": "Amazon.in",
       "category": "Cleaning & Home Care",
-      "deal_price": 179,
-      "mrp": 229,
-      "discount_pct": 22,
-      "savings_amount": 50,
-      "image_url": "https://m.media-amazon.com/images/I/51CdaYKfNEL._AC_UL320_.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0DF5TSDWD?tag=nammaveetubas-21",
-      "published_at": "2026-10-18T16:35:33.073Z"
+      "deal_price": 190,
+      "mrp": 292,
+      "discount_pct": 35,
+      "savings_amount": 102,
+      "image_url": "https://cdn3.desidime.com/attachments/photos/3555468/medium/41MRmWnc8rL.jpg?1792244546",
+      "affiliate_url": "https://www.amazon.in/dp/B0DGLHVLVQ?tag=nammaveetubas-21",
+      "published_at": "2026-10-18T16:41:22.242Z"
     },
     {
       "id": "amz-B0DKY5D56D",
