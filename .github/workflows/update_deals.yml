@@ -2,7 +2,7 @@ name: Update Nammaveetu Basket Daily Deals Feed
 
 on:
   schedule:
-    - cron: '0 */4 * * *' # Runs every 4 hours
+    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,16 +20,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch and wrap latest Indian deals
-        env:
-          AMZ_ASSOC_TAG: ${{ secrets.AMZ_ASSOC_TAG || 'nammaveetubas-21' }}
-          CUELINKS_PUB_ID: ${{ secrets.CUELINKS_PUB_ID || 'YOUR_PUB_ID' }}
-        run: node deals-backend/fetch_deals.js
+      - name: Run Deal Fetcher Script
+        run: node fetch_deals.js
 
-      - name: Commit and push updated home_feed.json
+      - name: Commit and Push Updated Deals
         run: |
-          git config user.name "nammaveetu-deals-bot"
-          git config user.email "deals-bot@nammaveetu.com"
-          git add deals-backend/home_feed.json
-          git diff --staged --quiet || git commit -m "chore(deals): auto-update home_feed.json [skip ci]"
-          git push
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add home_feed.json
+          git diff --staged --quiet || (git commit -m "Auto-update Malligai & Kitchen deals" && git push)
