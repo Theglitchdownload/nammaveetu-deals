@@ -1,7 +1,7 @@
 {
   "brand": "Nammaveetu Basket",
   "title": "Kitchen & Malligai Hot Deals",
-  "updated_at": "2026-10-19T23:23:26.052Z",
+  "updated_at": "2026-10-20T03:49:17.946Z",
   "total_deals": 220,
   "amazon_tag": "nammaveetubas-21",
   "deals": [
@@ -43,37 +43,37 @@
       "mrp": 1000,
       "discount_pct": 26,
       "savings_amount": 259,
-      "image_url": "https://cdn3.desidime.com/attachments/photos/3557009/medium/41kFOjnvTxL.jpg?1792395677",
+      "image_url": "https://cdn1.desidime.com/attachments/photos/3557009/medium/41kFOjnvTxL.jpg?1792395677",
       "affiliate_url": "https://www.amazon.in/dp/B07YWZMJFP?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.123Z"
+      "published_at": "2026-10-20T03:49:13.499Z"
     },
     {
-      "id": "amz-B0BLQTXSDX",
-      "asin": "B0BLQTXSDX",
-      "title": "SOLARA Sipper Water Bottle 1 Litre",
+      "id": "amz-B0CLVGZBSG",
+      "asin": "B0CLVGZBSG",
+      "title": "Stainless Steel Utensils Dish Rack/Multipurpose Rustproof Shelf/Storage Shelves/Stand For Home & Kitchen Cabinet,",
       "store": "Amazon.in",
       "category": "Kitchen & Cookware",
-      "deal_price": 299,
-      "mrp": 404,
+      "deal_price": 199,
+      "mrp": 269,
       "discount_pct": 26,
-      "savings_amount": 105,
-      "image_url": "https://cdn0.desidime.com/attachments/photos/3557365/medium/51t8NGDAL6L.jpg?1792430812",
-      "affiliate_url": "https://www.amazon.in/dp/B0BLQTXSDX?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.152Z"
+      "savings_amount": 70,
+      "image_url": "https://cdn1.desidime.com/attachments/photos/3556958/medium/41ijQEP1MLL.jpg?1792393626",
+      "affiliate_url": "https://www.amazon.in/dp/B0CLVGZBSG?tag=nammaveetubas-21",
+      "published_at": "2026-10-20T03:49:12.921Z"
     },
     {
-      "id": "amz-B0D41L64NR",
-      "asin": "B0D41L64NR",
-      "title": "Bosch 9 kg 5 Star Front Load Fully-Automatic Washing Machine",
+      "id": "amz-B0FFN56JXS",
+      "asin": "B0FFN56JXS",
+      "title": "AO Smith Geyser VAS PLUS 15 Litre | 5 Star BEE Rating",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 26490,
-      "mrp": 35762,
+      "deal_price": 5715,
+      "mrp": 7715,
       "discount_pct": 26,
-      "savings_amount": 9272,
-      "image_url": "https://cdn0.desidime.com/attachments/photos/3556861/medium/41ghglMc34L.jpg?1792381346",
-      "affiliate_url": "https://www.amazon.in/dp/B0D41L64NR?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.649Z"
+      "savings_amount": 2000,
+      "image_url": "https://cdn0.desidime.com/topics/photos/2184035/medium/ao-smith-geyser-vas-plus-2184035.jpg?1792388983",
+      "affiliate_url": "https://www.amazon.in/dp/B0FFN56JXS?tag=nammaveetubas-21",
+      "published_at": "2026-10-20T03:49:12.944Z"
     },
     {
       "id": "amz-B01COQMCSK",
@@ -118,32 +118,32 @@
       "published_at": "2026-10-19T09:40:32.472Z"
     },
     {
-      "id": "amz-B0CLVGZBSG",
-      "asin": "B0CLVGZBSG",
-      "title": "Stainless Steel Utensils Dish Rack/Multipurpose Rustproof Shelf/Storage Shelves/Stand For Home & Kitchen Cabinet,",
+      "id": "amz-B0BLQTXSDX",
+      "asin": "B0BLQTXSDX",
+      "title": "SOLARA Sipper Water Bottle 1 Litre",
       "store": "Amazon.in",
       "category": "Kitchen & Cookware",
-      "deal_price": 199,
-      "mrp": 269,
+      "deal_price": 299,
+      "mrp": 404,
       "discount_pct": 26,
-      "savings_amount": 70,
-      "image_url": "https://cdn3.desidime.com/attachments/photos/3556958/medium/41ijQEP1MLL.jpg?1792393626",
-      "affiliate_url": "https://www.amazon.in/dp/B0CLVGZBSG?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.402Z"
+      "savings_amount": 105,
+      "image_url": "https://cdn0.desidime.com/attachments/photos/3557365/medium/51t8NGDAL6L.jpg?1792430812",
+      "affiliate_url": "https://www.amazon.in/dp/B0BLQTXSDX?tag=nammaveetubas-21",
+      "published_at": "2026-10-19T23:23:20.152Z"
     },
     {
-      "id": "amz-B0CM3K6H57",
-      "asin": "B0CM3K6H57",
-      "title": "Wonderchef Nutri Blend Smart CKM Automatic Mixer Grinder with Dual Pulse Function",
+      "id": "amz-B0HFRG6M22",
+      "asin": "B0HFRG6M22",
+      "title": "Atomberg Althea Cold Press Juicer For Home",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 2360,
-      "mrp": 3186,
+      "deal_price": 11749,
+      "mrp": 15861,
       "discount_pct": 26,
-      "savings_amount": 826,
-      "image_url": "https://cdn2.desidime.com/attachments/photos/3557100/medium/41thmkdXGL.jpg?1792402127",
-      "affiliate_url": "https://www.amazon.in/dp/B0CM3K6H57?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.649Z"
+      "savings_amount": 4112,
+      "image_url": "https://cdn3.desidime.com/attachments/photos/3556828/medium/31ojl2mtX8L.jpg?1792379122",
+      "affiliate_url": "https://www.amazon.in/dp/B0HFRG6M22?tag=nammaveetubas-21",
+      "published_at": "2026-10-20T03:49:13.255Z"
     },
     {
       "id": "amz-B07575FPC3",
@@ -202,18 +202,18 @@
       "published_at": "2026-10-19T09:40:32.664Z"
     },
     {
-      "id": "amz-B0FFN56JXS",
-      "asin": "B0FFN56JXS",
-      "title": "AO Smith Geyser VAS PLUS 15 Litre | 5 Star BEE Rating",
+      "id": "amz-B0CM3K6H57",
+      "asin": "B0CM3K6H57",
+      "title": "Wonderchef Nutri Blend Smart CKM Automatic Mixer Grinder with Dual Pulse Function",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 5715,
-      "mrp": 7715,
+      "deal_price": 2360,
+      "mrp": 3186,
       "discount_pct": 26,
-      "savings_amount": 2000,
-      "image_url": "https://cdn3.desidime.com/topics/photos/2184035/medium/ao-smith-geyser-vas-plus-2184035.jpg?1792388983",
-      "affiliate_url": "https://www.amazon.in/dp/B0FFN56JXS?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.714Z"
+      "savings_amount": 826,
+      "image_url": "https://cdn3.desidime.com/attachments/photos/3557100/medium/41thmkdXGL.jpg?1792402127",
+      "affiliate_url": "https://www.amazon.in/dp/B0CM3K6H57?tag=nammaveetubas-21",
+      "published_at": "2026-10-20T03:49:13.468Z"
     },
     {
       "id": "amz-B0CNPL8X3D",
@@ -272,18 +272,18 @@
       "published_at": "2026-10-18T16:41:17.241Z"
     },
     {
-      "id": "amz-B0GHFS8GMH",
-      "asin": "B0GHFS8GMH",
-      "title": "Cruise 1.5 Ton 3 Star VarioQool Inverter Split AC (New BEE, CWCVBM-VQ3D173)",
+      "id": "amz-B0D41L64NR",
+      "asin": "B0D41L64NR",
+      "title": "Bosch 9 kg 5 Star Front Load Fully-Automatic Washing Machine",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 25990,
-      "mrp": 35087,
+      "deal_price": 26490,
+      "mrp": 35762,
       "discount_pct": 26,
-      "savings_amount": 9097,
-      "image_url": "https://cdn3.desidime.com/topics/photos/2184030/medium/cruise-15-ton-3-star-2184030.jpg?1792389119",
-      "affiliate_url": "https://www.amazon.in/dp/B0GHFS8GMH?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:20.932Z"
+      "savings_amount": 9272,
+      "image_url": "https://cdn2.desidime.com/attachments/photos/3556861/medium/41ghglMc34L.jpg?1792381346",
+      "affiliate_url": "https://www.amazon.in/dp/B0D41L64NR?tag=nammaveetubas-21",
+      "published_at": "2026-10-20T03:49:13.517Z"
     },
     {
       "id": "amz-B0CPVK4G2F",
@@ -353,7 +353,7 @@
       "savings_amount": 6335,
       "image_url": null,
       "affiliate_url": "https://www.amazon.in/dp/B0H1X7JHZP?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T23:23:21.068Z"
+      "published_at": "2026-10-20T03:49:13.634Z"
     },
     {
       "id": "amz-B00TZS0C38",
@@ -412,18 +412,18 @@
       "published_at": "2026-10-18T16:35:34.060Z"
     },
     {
-      "id": "amz-B0HFRG6M22",
-      "asin": "B0HFRG6M22",
-      "title": "Atomberg Althea Cold Press Juicer For Home",
+      "id": "amz-B0GHFS8GMH",
+      "asin": "B0GHFS8GMH",
+      "title": "Cruise 1.5 Ton 3 Star VarioQool Inverter Split AC (New BEE, CWCVBM-VQ3D173)",
       "store": "Amazon.in",
       "category": "Appliances",
-      "deal_price": 11749,
-      "mrp": 15861,
+      "deal_price": 25990,
+      "mrp": 35087,
       "discount_pct": 26,
-      "savings_amount": 4112,
-      "image_url": "https://cdn0.desidime.com/attachments/photos/3556828/medium/31ojl2mtX8L.jpg?1792379122",
-      "affiliate_url": "https://www.amazon.in/dp/B0HFRG6M22?tag=nammaveetubas-21",
-      "published_at": "2026-10-19T18:26:41.282Z"
+      "savings_amount": 9097,
+      "image_url": "https://cdn2.desidime.com/topics/photos/2184030/medium/cruise-15-ton-3-star-2184030.jpg?1792389119",
+      "affiliate_url": "https://www.amazon.in/dp/B0GHFS8GMH?tag=nammaveetubas-21",
+      "published_at": "2026-10-20T03:49:13.781Z"
     },
     {
       "id": "amz-B0C5XV43V3",
