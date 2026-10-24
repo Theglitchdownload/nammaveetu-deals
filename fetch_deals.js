@@ -4,15 +4,14 @@
  *
  * 1. Focuses 100% on Amazon.in Household, Kitchen & Malligai deals using ONLY our
  *    Amazon Affiliate ID (`nammaveetubas-21`).
- * 2. Categories match Nammaveetu Basket:
- *    - Malligai & Groceries
- *    - Dry Fruits & Oil
- *    - Cleaning & Home Care
- *    - Kitchen & Cookware
- *    - Appliances
- * 3. Every single item in `home_feed.json` has a verified, working Amazon.in product link
- *    (`https://www.amazon.in/dp/${asin}?tag=nammaveetubas-21`), real product image,
- *    Deal Price (₹), MRP (₹), and % Off savings badge.
+ * 2. Scrapes REAL LIVE Amazon.in prices via `fetchLiveAmazonPrice(asin)` using
+ *    Android 14 Chrome Mobile headers (`Accept-Language: en-IN,en;q=0.9`).
+ * 3. NEVER invents or guesses fake prices or fake MRPs:
+ *    - If live price is verified: sets `"price_verified": true`, `"current_price": <live INR>`,
+ *      `"deal_price": <live INR>`, and real `"mrp"` (if > current_price).
+ *    - If blocked or unverified: sets `"price_verified": false`, `"current_price": 0`, `"deal_price": 0`.
+ * 4. Supports `--cloud-rss-only` (or `GITHUB_ACTIONS=true`) so cloud runs every 4 hours
+ *    ONLY append new RSS deals and preserve verified Indian prices already in `home_feed.json`.
  */
 
 const fs = require('fs');
@@ -21,9 +20,13 @@ const path = require('path');
 const AMAZON_TAG = process.env.AMZ_ASSOC_TAG || 'nammaveetubas-21';
 const OUTPUT_PATH = path.join(__dirname, 'home_feed.json');
 const MAX_DEALS_TO_RETAIN = 220;
+const IS_CLOUD_RSS_ONLY =
+  process.argv.includes('--cloud-rss-only') || process.env.CLOUD_RSS_ONLY === 'true';
 
-const USER_AGENT =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+const MOBILE_USER_AGENT =
+  'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/128.0.0.0 Mobile Safari/537.36';
+const DESKTOP_USER_AGENT =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
 /**
  * Curated Amazon.in search feeds for the 5 Nammaveetu Basket household categories.
@@ -88,6 +91,7 @@ function cleanTitle(raw = '') {
     .replace(/<[^>]+>/g, ' ')
     .replace(/^Sponsored\s+Ad\s*[-–:]\s*/i, '')
     .replace(/^(?:GRAB|LOOT|Lowest|Hot|Deal)\s*:\s*/i, '')
+    .replace(/\s*[-|:]\s*Amazon\.in.*$/i, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -168,14 +172,14 @@ function classifyHouseholdCategory(title, defaultCategory = null) {
   return defaultCategory;
 }
 
-async function fetchText(url) {
+async function fetchText(url, useMobileHeaders = false) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 11000);
   try {
     const res = await fetch(url, {
       signal: controller.signal,
       headers: {
-        'User-Agent': USER_AGENT,
+        'User-Agent': useMobileHeaders ? MOBILE_USER_AGENT : DESKTOP_USER_AGENT,
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-IN,en;q=0.9'
       }
@@ -190,7 +194,138 @@ async function fetchText(url) {
 }
 
 /**
- * Parses Amazon.in search result cards into verified Malligai / Kitchen / Household deal objects.
+ * Fetches `https://www.amazon.in/dp/${asin}` using realistic Android 14 Chrome Mobile headers
+ * and extracts the REAL live price (`a-price-whole` / `priceAmount`), real MRP (`basisPrice` / `a-text-price`),
+ * and real product title & image.
+ *
+ * Never invents or guesses fake prices! If blocked or unavailable, returns `price_verified: false, current_price: 0`.
+ */
+async function fetchLiveAmazonPrice(asin) {
+  const cleanAsin = String(asin || '').trim().toUpperCase();
+  const url = `https://www.amazon.in/dp/${cleanAsin}`;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 10000);
+
+  try {
+    const res = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        'User-Agent': MOBILE_USER_AGENT,
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-IN,en;q=0.9'
+      }
+    });
+    clearTimeout(timer);
+
+    if (res.status === 404 || res.status === 410) {
+      return { dead: true, price_verified: false, current_price: 0, mrp: 0, discount_pct: 0 };
+    }
+    if (!res.ok) {
+      return { dead: false, price_verified: false, current_price: 0, mrp: 0, discount_pct: 0 };
+    }
+
+    const html = await res.text();
+
+    // Check for CAPTCHA / robot check or Page Not Found
+    if (
+      /Enter the characters you see below|api-services-support@amazon\.com/i.test(html)
+    ) {
+      return { dead: false, price_verified: false, current_price: 0, mrp: 0, discount_pct: 0 };
+    }
+    if (/<title>\s*Page Not Found\s*<\/title>/i.test(html)) {
+      return { dead: true, price_verified: false, current_price: 0, mrp: 0, discount_pct: 0 };
+    }
+
+    // Extract real product title
+    const rawTitleMatch =
+      html.match(/id=["'](?:productTitle|title)["'][^>]*>([\s\S]*?)<\/(?:span|h1)>/i) ||
+      html.match(/<meta\s+name=["']title["']\s+content=["']([^"']+)["']/i) ||
+      html.match(/<title>([\s\S]*?)<\/title>/i);
+    const liveTitle = rawTitleMatch ? cleanTitle(rawTitleMatch[1]) : null;
+
+    // Extract real product image
+    const ogImgMatch =
+      html.match(/property=["']og:image["']\s+content=["'](https:\/\/[^"']+)["']/i) ||
+      html.match(/id=["']landingImage["'][^>]+src=["'](https:\/\/[^"']+)["']/i);
+    let liveImage = ogImgMatch ? ogImgMatch[1] : null;
+    if (!liveImage) {
+      const amzImgs = (
+        html.match(/https:\/\/m\.media-amazon\.com\/images\/I\/[A-Za-z0-9.+_-]+\.jpg/g) || []
+      ).filter((u) => !u.includes('play-button') && !u.includes('sprite') && !u.includes('transparent'));
+      if (amzImgs.length > 0) liveImage = amzImgs[0];
+    }
+
+    // Check if main product is out of stock
+    const isUnavailable = /id=["']availability["'][\s\S]{0,300}?Currently unavailable/i.test(html);
+    if (isUnavailable) {
+      return {
+        dead: false,
+        price_verified: false,
+        current_price: 0,
+        mrp: 0,
+        discount_pct: 0,
+        title: liveTitle,
+        image_url: liveImage
+      };
+    }
+
+    // Extract exact live INR price from main buybox / priceToPay / priceAmount / a-price-whole
+    const mainPriceMatch =
+      html.match(/apex-pricetopay-value[\s\S]{0,350}?class=["']a-price-whole["'][^>]*>([0-9,]+)/i) ||
+      html.match(/priceToPay[\s\S]{0,350}?class=["']a-price-whole["'][^>]*>([0-9,]+)/i) ||
+      html.match(/corePriceDisplay[\s\S]{0,600}?class=["']a-price-whole["'][^>]*>([0-9,]+)/i) ||
+      html.match(/["']priceAmount["']\s*:\s*([0-9.]+)/i) ||
+      html.match(/class=["']a-price-whole["'][^>]*>([0-9,]+)/i);
+
+    const currentPrice = mainPriceMatch
+      ? Math.round(Number(String(mainPriceMatch[1]).replace(/,/g, '')))
+      : 0;
+
+    if (!Number.isFinite(currentPrice) || currentPrice < 10 || currentPrice > 250000) {
+      return {
+        dead: false,
+        price_verified: false,
+        current_price: 0,
+        mrp: 0,
+        discount_pct: 0,
+        title: liveTitle,
+        image_url: liveImage
+      };
+    }
+
+    // Extract real MRP ONLY if present on the page (never guess or multiply!)
+    const mrpMatch =
+      html.match(/apex-basisprice-offscreen-label[^>]*>M\.?R\.?P\.?:\s*₹\s*([0-9,]+)/i) ||
+      html.match(/basisprice-value[^>]*>\s*<span[^>]*>₹\s*([0-9,]+)/i) ||
+      html.match(/List Price:\s*<span[^>]*>\s*₹\s*([0-9,]+)/i) ||
+      html.match(/M\.?R\.?P\.?:\s*<span[^>]*>\s*<span[^>]*>₹\s*([0-9,]+)/i) ||
+      html.match(/class=["'][^"']*a-text-price[^"']*["'][^>]*>\s*<span[^>]*>₹\s*([0-9,]+)/i);
+
+    let mrp = mrpMatch ? Math.round(Number(String(mrpMatch[1]).replace(/,/g, ''))) : 0;
+    if (!Number.isFinite(mrp) || mrp <= currentPrice || mrp > currentPrice * 5) {
+      mrp = 0;
+    }
+
+    const discountPct =
+      mrp > currentPrice ? Math.round(((mrp - currentPrice) / mrp) * 100) : 0;
+
+    return {
+      dead: false,
+      price_verified: true,
+      current_price: currentPrice,
+      mrp,
+      discount_pct: discountPct,
+      title: liveTitle,
+      image_url: liveImage
+    };
+  } catch (_) {
+    clearTimeout(timer);
+    return { dead: false, price_verified: false, current_price: 0, mrp: 0, discount_pct: 0 };
+  }
+}
+
+/**
+ * Parses Amazon.in search result cards into candidate household deal objects.
  */
 function parseAmazonSearchCards(html, defaultCategory) {
   const deals = [];
@@ -205,7 +340,7 @@ function parseAmazonSearchCards(html, defaultCategory) {
     const imgMatch = block.match(/src=["'](https:\/\/m\.media-amazon\.com\/images\/I\/[^"']+)["']/i);
     const altMatch = block.match(/alt=["']([^"']{12,240})["']/i);
     const priceMatch = block.match(/class=["']a-price-whole["']>([0-9,]+)</i);
-    if (!altMatch || !priceMatch) continue;
+    if (!altMatch) continue;
 
     const title = cleanTitle(altMatch[1]);
     if (!title || title.length < 10) continue;
@@ -213,19 +348,22 @@ function parseAmazonSearchCards(html, defaultCategory) {
     const category = classifyHouseholdCategory(title, defaultCategory);
     if (!category) continue;
 
-    const dealPrice = Number(priceMatch[1].replace(/,/g, ''));
-    if (!Number.isFinite(dealPrice) || dealPrice < 20 || dealPrice > 150000) continue;
+    const rawPrice = priceMatch ? Math.round(Number(priceMatch[1].replace(/,/g, ''))) : 0;
+    const validPrice = Number.isFinite(rawPrice) && rawPrice >= 10 && rawPrice <= 250000 ? rawPrice : 0;
 
-    // Extract explicit M.R.P. if present on the card
+    // Extract explicit M.R.P. if present on the search card (never invent a fake MRP!)
     const mrpExplicitMatch =
       block.match(/M\.?R\.?P:?\s*<span[^>]*>\s*<span[^>]*>₹([0-9,]+)</i) ||
       block.match(/a-text-price["'][^>]*>\s*<span[^>]*>₹([0-9,]+)</i);
-    let mrp = mrpExplicitMatch ? Number(mrpExplicitMatch[1].replace(/,/g, '')) : null;
-    if (!mrp || mrp <= dealPrice || mrp > dealPrice * 4) {
-      mrp = Math.round(dealPrice * 1.28);
+    let mrp = mrpExplicitMatch ? Math.round(Number(mrpExplicitMatch[1].replace(/,/g, ''))) : 0;
+    if (!Number.isFinite(mrp) || mrp <= validPrice || mrp > validPrice * 5) {
+      mrp = 0;
     }
 
-    const discountPct = Math.max(5, Math.min(85, Math.round(((mrp - dealPrice) / mrp) * 100)));
+    const discountPct =
+      validPrice > 0 && mrp > validPrice
+        ? Math.round(((mrp - validPrice) / mrp) * 100)
+        : 0;
 
     deals.push({
       id: `amz-${asin}`,
@@ -233,10 +371,12 @@ function parseAmazonSearchCards(html, defaultCategory) {
       title,
       store: 'Amazon.in',
       category,
-      deal_price: dealPrice,
+      price_verified: validPrice > 0,
+      current_price: validPrice,
+      deal_price: validPrice,
       mrp,
       discount_pct: discountPct,
-      savings_amount: mrp - dealPrice,
+      savings_amount: mrp > validPrice ? mrp - validPrice : 0,
       image_url: imgMatch ? imgMatch[1] : null,
       affiliate_url: buildAmazonAffiliateUrl(asin),
       published_at: new Date().toISOString()
@@ -263,7 +403,7 @@ async function resolveRedirectToAmazonAsin(rawUrl) {
         redirect: 'manual',
         signal: controller.signal,
         headers: {
-          'User-Agent': USER_AGENT,
+          'User-Agent': DESKTOP_USER_AGENT,
           'Referer': 'https://www.desidime.com/'
         }
       });
@@ -299,22 +439,23 @@ function parseDesiDimeAmazonCandidates(body) {
 
     const decodedDesc = decodeEntities(descRaw);
     const visitMatch =
-      decodedDesc.match(/href=["'](https?:\/\/(?:visit\.desidime\.com\/visit\/|amzn\.to\/|amzn\.in\/|www\.amazon\.in\/)[^"']+)["']/i) ||
-      linkRaw.match(/(https?:\/\/[^\s<]+)/i);
+      decodedDesc.match(
+        /href=["'](https?:\/\/(?:visit\.desidime\.com\/visit\/|amzn\.to\/|amzn\.in\/|www\.amazon\.in\/)[^"']+)["']/i
+      ) || linkRaw.match(/(https?:\/\/[^\s<]+)/i);
     if (!visitMatch) continue;
 
     const imgMatch = decodedDesc.match(/<img[^>]+src=["'](https?:\/\/[^"']+)["']/i);
     const rawImg = imgMatch ? imgMatch[1] : null;
     const imageUrl = rawImg && !rawImg.includes('/merchants/') ? rawImg : null;
 
-    const priceMatch = `${title} ${cleanTitle(decodedDesc)}`.match(/(?:₹|\bRs\.?)\s*([0-9,]{2,6})\b/i);
-    const dealPrice = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : 249;
-    if (dealPrice < 20) continue;
+    // Extract explicit price ONLY if present in the RSS title (no fallback guessing!)
+    const priceMatch = title.match(/(?:₹|\bRs\.?|@)\s*([0-9,]{2,6})\b/i);
+    const rssPrice = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : 0;
 
     candidates.push({
       title,
       category,
-      dealPrice,
+      rssPrice: rssPrice >= 15 ? rssPrice : 0,
       imageUrl,
       visitUrl: visitMatch[1].trim()
     });
@@ -353,13 +494,12 @@ function parseDesiDimeAmazonCandidates(body) {
     const priceBlockMatch = article.match(/text-primary\s+mr-2[^>]*>([\s\S]*?)<\/div>/i);
     const priceText = priceBlockMatch ? cleanTitle(priceBlockMatch[1]) : '';
     const priceMatch = `${priceText} ${title}`.match(/(?:₹|\bRs\.?)\s*([0-9,]{2,6})\b/i);
-    const dealPrice = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : null;
-    if (!dealPrice || dealPrice < 20) continue;
+    const rssPrice = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : 0;
 
     candidates.push({
       title,
       category,
-      dealPrice,
+      rssPrice: rssPrice >= 15 ? rssPrice : 0,
       imageUrl,
       visitUrl
     });
@@ -392,8 +532,7 @@ function parseTelegramAmazonCandidates(body) {
     if (!category) continue;
 
     const priceMatch = cleanMsg.match(/(?:₹|\bRs\.?|@)\s*([0-9,]{2,6})\b/i);
-    const dealPrice = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : 249;
-    if (dealPrice < 20 || dealPrice > 150000) continue;
+    const rssPrice = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : 0;
 
     const imgMatch = block.match(/background-image:url\(['"](https?:\/\/[^'"]+)['"]\)/i);
     const titleSnippet = cleanMsg
@@ -407,135 +546,13 @@ function parseTelegramAmazonCandidates(body) {
     candidates.push({
       title: titleSnippet,
       category,
-      dealPrice,
+      rssPrice: rssPrice >= 15 && rssPrice <= 150000 ? rssPrice : 0,
       imageUrl: imgMatch ? imgMatch[1] : null,
       visitUrl: decodeEntities(linkMatch[1])
     });
   }
 
   return candidates;
-}
-
-/**
- * Curated verified baseline Amazon.in Household, Kitchen & Malligai deals.
- */
-function getVerifiedMalligaiSeedDeals() {
-  const seeds = [
-    {
-      asin: 'B07BH3LNSG',
-      title: 'Tata Sampann Chilli Powder with Natural Oils, 500g (Lal Mirchi Powder)',
-      category: 'Malligai & Groceries',
-      deal_price: 278,
-      mrp: 360,
-      image_url: 'https://m.media-amazon.com/images/I/61gKSt+F7SL._AC_UL320_.jpg'
-    },
-    {
-      asin: 'B07575FPC3',
-      title: 'Tata Sampann Unpolished Toor Dal (Arhar Dal), 1kg Pouch',
-      category: 'Malligai & Groceries',
-      deal_price: 169,
-      mrp: 225,
-      image_url: null
-    },
-    {
-      asin: 'B01N5K323H',
-      title: 'Fortune Sunlite Refined Sunflower Oil, 5L Can',
-      category: 'Dry Fruits & Oil',
-      deal_price: 689,
-      mrp: 890,
-      image_url: null
-    },
-    {
-      asin: 'B00M9274A8',
-      title: 'Aashirvaad Shudh Chakki Whole Wheat Atta, 5kg Pack',
-      category: 'Malligai & Groceries',
-      deal_price: 248,
-      mrp: 315,
-      image_url: null
-    },
-    {
-      asin: 'B07H5C9B6M',
-      title: 'Surf Excel Matic Top Load Liquid Detergent 2L Refill Pouch',
-      category: 'Cleaning & Home Care',
-      deal_price: 325,
-      mrp: 450,
-      image_url: null
-    },
-    {
-      asin: 'B0DGLHVLVQ',
-      title: 'Dettol Lime Fresh Bathing Soap Bar with 12hr Freshness (150g Pack of 5)',
-      category: 'Cleaning & Home Care',
-      deal_price: 190,
-      mrp: 292,
-      image_url: 'https://cdn3.desidime.com/attachments/photos/3555468/medium/41MRmWnc8rL.jpg?1792244546'
-    },
-    {
-      asin: 'B01H1N4H50',
-      title: 'India Gate Basmati Rice Feast Rozzana, 5kg Pack',
-      category: 'Malligai & Groceries',
-      deal_price: 429,
-      mrp: 595,
-      image_url: null
-    },
-    {
-      asin: 'B00M9271EC',
-      title: 'Tata Tea Gold Assam Tea with Gently Rolled Long Leaves, 1kg',
-      category: 'Malligai & Groceries',
-      deal_price: 495,
-      mrp: 640,
-      image_url: null
-    },
-    {
-      asin: 'B07WMS7TWB',
-      title: 'Pigeon Amaze Plus 1.5 Litre Stainless Steel Electric Kettle (1500W)',
-      category: 'Appliances',
-      deal_price: 549,
-      mrp: 1245,
-      image_url: null
-    },
-    {
-      asin: 'B08CF3D7QR',
-      title: 'Prestige Iris Plus 750 Watt Mixer Grinder with 4 Jars',
-      category: 'Appliances',
-      deal_price: 2999,
-      mrp: 6195,
-      image_url: null
-    },
-    {
-      asin: 'B01M65D93B',
-      title: 'Philips HL7756/00 750 Watt Mixer Grinder with 3 Stainless Steel Jars',
-      category: 'Appliances',
-      deal_price: 3299,
-      mrp: 5295,
-      image_url: null
-    },
-    {
-      asin: 'B00MIYM0VS',
-      title: 'Milton Thermosteel Flip Lid Hot & Cold Vacuum Flask, 1000ml',
-      category: 'Kitchen & Cookware',
-      deal_price: 799,
-      mrp: 1185,
-      image_url: null
-    }
-  ];
-
-  return seeds.map((s) => {
-    const discountPct = Math.round(((s.mrp - s.deal_price) / s.mrp) * 100);
-    return {
-      id: `amz-${s.asin}`,
-      asin: s.asin,
-      title: s.title,
-      store: 'Amazon.in',
-      category: s.category,
-      deal_price: s.deal_price,
-      mrp: s.mrp,
-      discount_pct: discountPct,
-      savings_amount: s.mrp - s.deal_price,
-      image_url: s.image_url,
-      affiliate_url: buildAmazonAffiliateUrl(s.asin),
-      published_at: new Date().toISOString()
-    };
-  });
 }
 
 async function runPool(items, concurrency, workerFn) {
@@ -555,102 +572,161 @@ async function runPool(items, concurrency, workerFn) {
   return results;
 }
 
-async function main() {
-  const collectedDeals = [];
+function loadExistingFeedMap() {
+  const existingByAsin = new Map();
+  const existingList = [];
+  if (!fs.existsSync(OUTPUT_PATH)) return { existingByAsin, existingList };
 
-  // 1. Scrape DesiDime RSS & Amazon India store + Telegram deal feeds FIRST so fresh brand deals rotate in at the top!
-  console.log('Fetching fresh DesiDime RSS & Telegram Amazon India household deal candidates...');
+  try {
+    const prevJson = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'));
+    const prevList = Array.isArray(prevJson)
+      ? prevJson
+      : prevJson && Array.isArray(prevJson.deals)
+        ? prevJson.deals
+        : [];
+    for (const d of prevList) {
+      if (!d || !d.affiliate_url) continue;
+      const asin = (d.asin || extractAmazonAsin(d.affiliate_url) || '').toUpperCase();
+      if (!/^[A-Z0-9]{10}$/.test(asin)) continue;
+      const cat = classifyHouseholdCategory(d.title || '', d.category || null);
+      if (!cat) continue;
+
+      const currentPrice =
+        d.price_verified === true
+          ? Number(d.current_price || d.deal_price || 0)
+          : 0;
+      const mrp =
+        d.price_verified === true && Number(d.mrp) > currentPrice
+          ? Number(d.mrp)
+          : 0;
+      const discountPct =
+        mrp > currentPrice ? Math.round(((mrp - currentPrice) / mrp) * 100) : 0;
+
+      const normalized = {
+        id: `amz-${asin}`,
+        asin,
+        title: cleanTitle(d.title),
+        store: 'Amazon.in',
+        category: cat,
+        price_verified: d.price_verified === true && currentPrice > 0,
+        current_price: currentPrice > 0 ? currentPrice : 0,
+        deal_price: currentPrice > 0 ? currentPrice : 0,
+        mrp,
+        discount_pct: discountPct,
+        savings_amount: mrp > currentPrice ? mrp - currentPrice : 0,
+        image_url: d.image_url || null,
+        affiliate_url: buildAmazonAffiliateUrl(asin),
+        published_at: d.published_at || new Date().toISOString()
+      };
+      existingByAsin.set(asin, normalized);
+      existingList.push(normalized);
+    }
+  } catch (_) {}
+  return { existingByAsin, existingList };
+}
+
+async function main() {
+  const { existingByAsin, existingList } = loadExistingFeedMap();
+
+  // 1. Fetch fresh DesiDime RSS + Telegram deal candidates
+  console.log(
+    `Fetching fresh DesiDime RSS & Telegram Amazon India household deals (mode: ${
+      IS_CLOUD_RSS_ONLY ? 'CLOUD_RSS_ONLY' : 'LOCAL_INDIAN_LIVE_PRICES'
+    })...`
+  );
   const liveFeedCandidates = [];
   await runPool(DESIDIME_AMAZON_SOURCES, 4, async (sourceUrl) => {
     try {
-      const html = await fetchText(sourceUrl);
+      const html = await fetchText(sourceUrl, false);
       liveFeedCandidates.push(...parseDesiDimeAmazonCandidates(html));
     } catch (_) {}
   });
 
   await runPool(TELEGRAM_DEAL_SOURCES, 3, async (sourceUrl) => {
     try {
-      const html = await fetchText(sourceUrl);
+      const html = await fetchText(sourceUrl, false);
       liveFeedCandidates.push(...parseTelegramAmazonCandidates(html));
     } catch (_) {}
   });
 
-  const resolvedLiveFeedDeals = await runPool(liveFeedCandidates, 10, async (cand) => {
+  const resolvedLiveFeedDeals = await runPool(liveFeedCandidates, 8, async (cand) => {
     const asin = await resolveRedirectToAmazonAsin(cand.visitUrl);
     if (!asin) return null;
-    const mrp = Math.round(cand.dealPrice * 1.35);
-    const discountPct = Math.round(((mrp - cand.dealPrice) / mrp) * 100);
+
+    // If this ASIN already has a verified Indian price in home_feed.json and we are in cloud mode, preserve it!
+    if (IS_CLOUD_RSS_ONLY && existingByAsin.has(asin)) {
+      const existing = existingByAsin.get(asin);
+      if (existing.price_verified && existing.current_price > 0) {
+        return existing;
+      }
+    }
+
+    // In cloud mode, if RSS feed title explicitly had a price, use it; otherwise unverified (0)
+    if (IS_CLOUD_RSS_ONLY) {
+      const hasRssPrice = cand.rssPrice > 0;
+      return {
+        id: `amz-${asin}`,
+        asin,
+        title: cand.title,
+        store: 'Amazon.in',
+        category: cand.category,
+        price_verified: hasRssPrice,
+        current_price: hasRssPrice ? cand.rssPrice : 0,
+        deal_price: hasRssPrice ? cand.rssPrice : 0,
+        mrp: 0,
+        discount_pct: 0,
+        savings_amount: 0,
+        image_url: cand.imageUrl,
+        affiliate_url: buildAmazonAffiliateUrl(asin),
+        published_at: new Date().toISOString()
+      };
+    }
+
+    // In local Indian IP mode, we will verify live price via fetchLiveAmazonPrice(asin) below
     return {
       id: `amz-${asin}`,
       asin,
       title: cand.title,
       store: 'Amazon.in',
       category: cand.category,
-      deal_price: cand.dealPrice,
-      mrp,
-      discount_pct: discountPct,
-      savings_amount: mrp - cand.dealPrice,
+      price_verified: false,
+      current_price: 0,
+      deal_price: 0,
+      mrp: 0,
+      discount_pct: 0,
+      savings_amount: 0,
       image_url: cand.imageUrl,
       affiliate_url: buildAmazonAffiliateUrl(asin),
       published_at: new Date().toISOString()
     };
   });
-  console.log(`Resolved ${resolvedLiveFeedDeals.length} fresh DesiDime RSS / Telegram Amazon household deals.`);
-  collectedDeals.push(...resolvedLiveFeedDeals);
 
-  // 2. Scrape live Amazon.in Household, Kitchen & Malligai category searches with gentle pacing
-  console.log(`Fetching live Amazon.in Household & Malligai deals across ${AMAZON_CATEGORY_QUERIES.length} queries...`);
-  await runPool(AMAZON_CATEGORY_QUERIES, 2, async (item, idx) => {
-    try {
-      await new Promise((r) => setTimeout(r, (idx % 3) * 200 + 150));
-      const url = `https://www.amazon.in/s?k=${encodeURIComponent(item.query)}`;
-      const html = await fetchText(url);
-      const parsed = parseAmazonSearchCards(html, item.category);
-      if (parsed.length > 0) {
-        collectedDeals.push(...parsed);
-      }
-    } catch (_) {}
-  });
+  console.log(`Resolved ${resolvedLiveFeedDeals.length} DesiDime RSS / Telegram Amazon household deals.`);
 
-  // 3. Merge existing verified Amazon Household/Malligai deals from home_feed.json if present
-  if (fs.existsSync(OUTPUT_PATH)) {
-    try {
-      const prevJson = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'));
-      const prevList = Array.isArray(prevJson)
-        ? prevJson
-        : prevJson && Array.isArray(prevJson.deals)
-          ? prevJson.deals
-          : [];
-      for (const d of prevList) {
-        if (!d || !d.affiliate_url) continue;
-        const asin = d.asin || extractAmazonAsin(d.affiliate_url);
-        if (!asin) continue;
-        const cat = classifyHouseholdCategory(d.title || '', null);
-        if (!cat) continue;
-        const dealPrice = Number(d.deal_price) || 299;
-        const mrp = Number(d.mrp) > dealPrice ? Number(d.mrp) : Math.round(dealPrice * 1.32);
-        collectedDeals.push({
-          id: `amz-${asin}`,
-          asin,
-          title: cleanTitle(d.title),
-          store: 'Amazon.in',
-          category: cat,
-          deal_price: dealPrice,
-          mrp,
-          discount_pct: Math.round(((mrp - dealPrice) / mrp) * 100),
-          savings_amount: mrp - dealPrice,
-          image_url: d.image_url || null,
-          affiliate_url: buildAmazonAffiliateUrl(asin),
-          published_at: d.published_at || new Date().toISOString()
-        });
-      }
-    } catch (_) {}
+  const collectedCandidates = [...resolvedLiveFeedDeals];
+
+  // 2. If running locally on Indian IP, scrape live Amazon.in category searches
+  if (!IS_CLOUD_RSS_ONLY) {
+    console.log(
+      `Fetching live Amazon.in Household & Malligai search cards across ${AMAZON_CATEGORY_QUERIES.length} queries...`
+    );
+    await runPool(AMAZON_CATEGORY_QUERIES, 2, async (item, idx) => {
+      try {
+        await new Promise((r) => setTimeout(r, (idx % 3) * 200 + 150));
+        const url = `https://www.amazon.in/s?k=${encodeURIComponent(item.query)}`;
+        const html = await fetchText(url, false);
+        const parsed = parseAmazonSearchCards(html, item.category);
+        if (parsed.length > 0) {
+          collectedCandidates.push(...parsed);
+        }
+      } catch (_) {}
+    });
   }
 
-  // 4. Add curated verified baseline deals
-  collectedDeals.push(...getVerifiedMalligaiSeedDeals());
+  // 3. Append existing home_feed.json items
+  collectedCandidates.push(...existingList);
 
-  // 5. Deduplicate by Amazon ASIN and interleave evenly across all 5 categories
+  // 4. Deduplicate by ASIN and interleave across categories
   const seenAsins = new Set();
   const byCategory = {
     'Malligai & Groceries': [],
@@ -660,7 +736,7 @@ async function main() {
     'Appliances': []
   };
 
-  for (const deal of collectedDeals) {
+  for (const deal of collectedCandidates) {
     if (!deal || !deal.asin || !/^[A-Z0-9]{10}$/.test(deal.asin)) continue;
     if (seenAsins.has(deal.asin)) continue;
     seenAsins.add(deal.asin);
@@ -672,14 +748,14 @@ async function main() {
     byCategory[cat].push(deal);
   }
 
-  const finalDeals = [];
+  const candidateDeals = [];
   const catNames = Object.keys(byCategory);
   let round = 0;
-  while (finalDeals.length < MAX_DEALS_TO_RETAIN) {
+  while (candidateDeals.length < MAX_DEALS_TO_RETAIN + 25) {
     let addedInRound = false;
     for (const cat of catNames) {
-      if (round < byCategory[cat].length && finalDeals.length < MAX_DEALS_TO_RETAIN) {
-        finalDeals.push(byCategory[cat][round]);
+      if (round < byCategory[cat].length && candidateDeals.length < MAX_DEALS_TO_RETAIN + 25) {
+        candidateDeals.push(byCategory[cat][round]);
         addedInRound = true;
       }
     }
@@ -687,18 +763,114 @@ async function main() {
     round++;
   }
 
+  // 5. In local Indian IP mode, verify every item via `fetchLiveAmazonPrice(asin)` in small batches
+  let verifiedFinalDeals = [];
+  if (!IS_CLOUD_RSS_ONLY) {
+    console.log(
+      `Verifying exact live Amazon.in /dp/ prices for ${candidateDeals.length} items in small batches...`
+    );
+    const batchSize = 6;
+    let verifiedCount = 0;
+    let unverifiedCount = 0;
+    let droppedDeadCount = 0;
+
+    for (let i = 0; i < candidateDeals.length; i += batchSize) {
+      if (verifiedFinalDeals.length >= MAX_DEALS_TO_RETAIN) break;
+      const batch = candidateDeals.slice(i, i + batchSize);
+      const batchResults = await Promise.all(
+        batch.map(async (deal) => {
+          const live = await fetchLiveAmazonPrice(deal.asin);
+          if (live.dead) {
+            droppedDeadCount++;
+            return null;
+          }
+
+          const finalTitle =
+            live.title && live.title.length >= 10 ? live.title : deal.title;
+          const finalImage = live.image_url || deal.image_url || null;
+          const finalCategory =
+            classifyHouseholdCategory(finalTitle, deal.category) || deal.category;
+
+          if (live.price_verified && live.current_price > 0) {
+            verifiedCount++;
+            return {
+              id: `amz-${deal.asin}`,
+              asin: deal.asin,
+              title: finalTitle,
+              store: 'Amazon.in',
+              category: finalCategory,
+              price_verified: true,
+              current_price: live.current_price,
+              deal_price: live.current_price,
+              mrp: live.mrp,
+              discount_pct: live.discount_pct,
+              savings_amount: live.mrp > live.current_price ? live.mrp - live.current_price : 0,
+              image_url: finalImage,
+              affiliate_url: buildAmazonAffiliateUrl(deal.asin),
+              published_at: new Date().toISOString()
+            };
+          }
+
+          // If search card already had a live price from this run, use it; otherwise mark unverified (0)
+          if (deal.price_verified && deal.current_price > 0) {
+            verifiedCount++;
+            return {
+              ...deal,
+              title: finalTitle,
+              image_url: finalImage,
+              category: finalCategory
+            };
+          }
+
+          unverifiedCount++;
+          return {
+            id: `amz-${deal.asin}`,
+            asin: deal.asin,
+            title: finalTitle,
+            store: 'Amazon.in',
+            category: finalCategory,
+            price_verified: false,
+            current_price: 0,
+            deal_price: 0,
+            mrp: 0,
+            discount_pct: 0,
+            savings_amount: 0,
+            image_url: finalImage,
+            affiliate_url: buildAmazonAffiliateUrl(deal.asin),
+            published_at: new Date().toISOString()
+          };
+        })
+      );
+
+      for (const res of batchResults) {
+        if (res && verifiedFinalDeals.length < MAX_DEALS_TO_RETAIN) {
+          verifiedFinalDeals.push(res);
+        }
+      }
+      await new Promise((r) => setTimeout(r, 220));
+    }
+
+    console.log(
+      `Live Amazon.in verification complete: ${verifiedCount} verified live prices, ${unverifiedCount} unverified (0), ${droppedDeadCount} dead 404s removed.`
+    );
+  } else {
+    verifiedFinalDeals = candidateDeals.slice(0, MAX_DEALS_TO_RETAIN);
+  }
+
   const payload = {
     brand: 'Nammaveetu Basket',
     title: 'Kitchen & Malligai Hot Deals',
     updated_at: new Date().toISOString(),
-    total_deals: finalDeals.length,
+    total_deals: verifiedFinalDeals.length,
     amazon_tag: AMAZON_TAG,
-    deals: finalDeals
+    deals: verifiedFinalDeals
   };
 
   const jsonStr = JSON.stringify(payload, null, 2);
   fs.writeFileSync(OUTPUT_PATH, jsonStr, 'utf8');
-  console.log(`Successfully saved ${finalDeals.length} Amazon Kitchen & Malligai deals to ${OUTPUT_PATH}`);
+  console.log(
+    `Successfully saved ${verifiedFinalDeals.length} Amazon Kitchen & Malligai deals to ${OUTPUT_PATH}`
+  );
 
   const extraTargets = [
     path.join(__dirname, '..', 'assets', 'data', 'home_feed.json'),
@@ -708,7 +880,7 @@ async function main() {
     try {
       if (fs.existsSync(path.dirname(target))) {
         fs.writeFileSync(target, jsonStr, 'utf8');
-        console.log(`Synced ${finalDeals.length} Amazon Kitchen & Malligai deals to ${target}`);
+        console.log(`Synced ${verifiedFinalDeals.length} Amazon Kitchen & Malligai deals to ${target}`);
       }
     } catch (_) {}
   }

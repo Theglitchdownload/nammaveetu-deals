@@ -2,7 +2,7 @@ name: Update Nammaveetu Basket Daily Deals Feed
 
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 */4 * * *' # Runs every 4 hours
   workflow_dispatch:
 
 permissions:
@@ -10,23 +10,35 @@ permissions:
 
 jobs:
   update-deals-feed:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
-          node-version: '24'
-          package-manager-cache: false
+          node-version: '20'
 
-      - name: Run Deal Fetcher Script
-        run: node fetch_deals.js
+      - name: Append fresh RSS deals while preserving verified Indian prices
+        env:
+          AMZ_ASSOC_TAG: ${{ secrets.AMZ_ASSOC_TAG || 'nammaveetubas-21' }}
+          CLOUD_RSS_ONLY: 'true'
+        run: |
+          if [ -f "fetch_deals.js" ]; then
+            node fetch_deals.js --cloud-rss-only
+          else
+            node deals-backend/fetch_deals.js --cloud-rss-only
+          fi
 
-      - name: Commit and Push Updated Deals
+      - name: Commit and push updated home_feed.json
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add home_feed.json
-          git diff --staged --quiet || (git commit -m "Auto-update Malligai & Kitchen deals" && git push)
+          if [ -f "home_feed.json" ]; then
+            git add home_feed.json
+          fi
+          if [ -f "deals-backend/home_feed.json" ]; then
+            git add deals-backend/home_feed.json
+          fi
+          git diff --staged --quiet || (git commit -m "chore(deals): append fresh RSS deals & preserve verified Indian prices [skip ci]" && git push)
