@@ -1,7 +1,7 @@
 {
   "brand": "Nammaveetu Basket",
   "title": "Kitchen & Malligai Hot Deals",
-  "updated_at": "2026-11-15T15:25:56.597Z",
+  "updated_at": "2026-11-15T20:51:49.158Z",
   "total_deals": 220,
   "amazon_tag": "nammaveetubas-21",
   "deals": [
@@ -150,20 +150,20 @@
       "published_at": "2026-11-14T23:41:47.184Z"
     },
     {
-      "id": "amz-B0BMF98SLR",
-      "asin": "B0BMF98SLR",
-      "title": "LONGWAY Starlite-1 P2 1200 mm/48 inch Ultra High Speed 3 Blade Anti-Dust Decorative Star Rated Ceiling Fan 2 Years Warranty (Golden Beige, Pack of 2)",
+      "id": "amz-B0H1X7JHZP",
+      "asin": "B0H1X7JHZP",
+      "title": "Whirlpool Smart Choice 9 Kg Steam Wash Technology 5 Star Inverter Front Load Fully Automatic Washing Machine with In-Built Heater (SUPREME CARE 9014-E, Midnight Grey, 100+ Tough Stains, 1400 RPM)",
       "store": "Amazon.in",
       "category": "Appliances",
       "price_verified": true,
-      "current_price": 2699,
-      "deal_price": 2699,
-      "mrp": 0,
-      "discount_pct": 0,
-      "savings_amount": 0,
-      "image_url": "https://cdn3.desidime.com/attachments/photos/3576154/medium/31-IJKCKSmL.jpg?1794722361",
-      "affiliate_url": "https://www.amazon.in/dp/B0BMF98SLR?tag=nammaveetubas-21",
-      "published_at": "2026-11-15T15:25:56.314Z"
+      "current_price": 39590,
+      "deal_price": 39590,
+      "mrp": 45550,
+      "discount_pct": 13,
+      "savings_amount": 5960,
+      "image_url": "https://m.media-amazon.com/images/I/41FIFrsFczL.jpg",
+      "affiliate_url": "https://www.amazon.in/dp/B0H1X7JHZP?tag=nammaveetubas-21",
+      "published_at": "2026-11-10T04:27:07.230Z"
     },
     {
       "id": "amz-B07XS18J5N",
@@ -230,20 +230,20 @@
       "published_at": "2026-11-14T11:14:59.320Z"
     },
     {
-      "id": "amz-B0H1X7JHZP",
-      "asin": "B0H1X7JHZP",
-      "title": "Whirlpool Smart Choice 9 Kg Steam Wash Technology 5 Star Inverter Front Load Fully Automatic Washing Machine with In-Built Heater (SUPREME CARE 9014-E, Midnight Grey, 100+ Tough Stains, 1400 RPM)",
+      "id": "amz-B0BMF98SLR",
+      "asin": "B0BMF98SLR",
+      "title": "LONGWAY Starlite-1 P2 1200 mm/48 inch Ultra High Speed 3 Blade Anti-Dust Decorative Star Rated Ceiling Fan 2 Years Warranty (Golden Beige, Pack of 2)",
       "store": "Amazon.in",
       "category": "Appliances",
       "price_verified": true,
-      "current_price": 39590,
-      "deal_price": 39590,
-      "mrp": 45550,
-      "discount_pct": 13,
-      "savings_amount": 5960,
-      "image_url": "https://m.media-amazon.com/images/I/41FIFrsFczL.jpg",
-      "affiliate_url": "https://www.amazon.in/dp/B0H1X7JHZP?tag=nammaveetubas-21",
-      "published_at": "2026-11-10T04:27:07.230Z"
+      "current_price": 2699,
+      "deal_price": 2699,
+      "mrp": 0,
+      "discount_pct": 0,
+      "savings_amount": 0,
+      "image_url": "https://cdn3.desidime.com/attachments/photos/3576154/medium/31-IJKCKSmL.jpg?1794722361",
+      "affiliate_url": "https://www.amazon.in/dp/B0BMF98SLR?tag=nammaveetubas-21",
+      "published_at": "2026-11-15T15:25:56.314Z"
     },
     {
       "id": "amz-B00L926JNU",
